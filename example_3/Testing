@@ -1,0 +1,86 @@
+// Computation Graph
+digraph {
+	"LogSoftmaxBackward
+0x7fdd788b8f90" -> "TBackward
+0x7fddf64ab790"
+	"TBackward
+0x7fddf64ab790" -> "MmBackward
+0x7fdd783e8a90"
+	"MmBackward
+0x7fdd783e8a90" -> "AccumulateGrad
+0x7fdd783e8810
+torch.Size([20, 64])"
+	"MmBackward
+0x7fdd783e8a90" -> "SigmoidBackward
+0x7fdd783e8ad0"
+	"SigmoidBackward
+0x7fdd783e8ad0" -> "AddBackward0
+0x7fdd783e8fd0"
+	"AddBackward0
+0x7fdd783e8fd0" -> "UnsqueezeBackward0
+0x7fdd783e8e90"
+	"UnsqueezeBackward0
+0x7fdd783e8e90" -> "SumBackward1
+0x7fdd783f6150"
+	"SumBackward1
+0x7fdd783f6150" -> "MulBackward0
+0x7fdd783f62d0"
+	"MulBackward0
+0x7fdd783f62d0" -> "AccumulateGrad
+0x7fdd783f63d0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7fdd783f62d0" -> "AccumulateGrad
+0x7fdd783f6410
+torch.Size([64, 10])"
+	"AddBackward0
+0x7fdd783e8fd0" -> "MmBackward
+0x7fdd783f60d0"
+	"MmBackward
+0x7fdd783f60d0" -> "AccumulateGrad
+0x7fdd783e8d50
+torch.Size([64, 64])"
+	"MmBackward
+0x7fdd783f60d0" -> "UnsqueezeBackward0
+0x7fdd783f6350"
+	"UnsqueezeBackward0
+0x7fdd783f6350" -> "SumBackward1
+0x7fdd783f6850"
+	"SumBackward1
+0x7fdd783f6850" -> "MulBackward0
+0x7fdd783f6490"
+	"MulBackward0
+0x7fdd783f6490" -> "SoftmaxBackward
+0x7fdd783f6550"
+	"SoftmaxBackward
+0x7fdd783f6550" -> "MmBackward
+0x7fdd783f6810"
+	"MmBackward
+0x7fdd783f6810" -> "TBackward
+0x7fdd783f6890"
+	"TBackward
+0x7fdd783f6890" -> "UnsqueezeBackward0
+0x7fdd783e8e90"
+	"UnsqueezeBackward0
+0x7fdd783e8e90" -> "SumBackward1
+0x7fdd783f6a50"
+	"SumBackward1
+0x7fdd783f6a50" -> "MulBackward0
+0x7fdd783f6bd0"
+	"MulBackward0
+0x7fdd783f6bd0" -> "AccumulateGrad
+0x7fdd783f6e10
+torch.Size([64, 10])"
+	"MulBackward0
+0x7fdd783f6bd0" -> "AccumulateGrad
+0x7fdd783f6f10
+torch.Size([64, 10])"
+	"MmBackward
+0x7fdd783f6810" -> "AccumulateGrad
+0x7fdd783f6790
+torch.Size([64, 20])"
+	"MulBackward0
+0x7fdd783f6490" -> "AccumulateGrad
+0x7fdd783f6790
+torch.Size([64, 20])"
+}

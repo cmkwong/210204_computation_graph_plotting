@@ -1,0 +1,53 @@
+// Computation Graph
+digraph {
+	"DotBackward
+0x7f5dbc9015d0" -> "AccumulateGrad
+0x7f5e3a52cb10
+torch.Size([4])"
+	"DotBackward
+0x7f5dbc9015d0" -> "MulBackward0
+0x7f5e3a52c950"
+	"MulBackward0
+0x7f5e3a52c950" -> "MulBackward0
+0x7f5dbc49abd0"
+	"MulBackward0
+0x7f5dbc49abd0" -> "MulBackward0
+0x7f5dbc424b90"
+	"MulBackward0
+0x7f5dbc424b90" -> "AccumulateGrad
+0x7f5dbc439550
+torch.Size([4])"
+	"MulBackward0
+0x7f5dbc424b90" -> "AddBackward0
+0x7f5dbc439950"
+	"AddBackward0
+0x7f5dbc439950" -> "AccumulateGrad
+0x7f5dbc439bd0
+torch.Size([4])"
+	"AddBackward0
+0x7f5dbc439950" -> "AccumulateGrad
+0x7f5dbc439b10
+torch.Size([4])"
+	"MulBackward0
+0x7f5dbc49abd0" -> "AddBackward0
+0x7f5dbc424b10"
+	"AddBackward0
+0x7f5dbc424b10" -> "AccumulateGrad
+0x7f5dbc439a50
+torch.Size([4])"
+	"AddBackward0
+0x7f5dbc424b10" -> "AccumulateGrad
+0x7f5dbc4395d0
+torch.Size([4])"
+	"MulBackward0
+0x7f5e3a52c950" -> "AddBackward0
+0x7f5dbc424d10"
+	"AddBackward0
+0x7f5dbc424d10" -> "AccumulateGrad
+0x7f5dbc424b10
+torch.Size([4])"
+	"AddBackward0
+0x7f5dbc424d10" -> "AccumulateGrad
+0x7f5dbc424b90
+torch.Size([4])"
+}
