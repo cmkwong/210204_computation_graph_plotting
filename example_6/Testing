@@ -1,0 +1,1733 @@
+// Computation Graph
+digraph {
+	"DivBackward0
+0x7f60338d2a10" -> "AddBackward0
+0x7f60338d2c10"
+	"AddBackward0
+0x7f60338d2c10" -> "DivBackward0
+0x7f60338d2b50"
+	"DivBackward0
+0x7f60338d2b50" -> "AddBackward0
+0x7f60338d2e90"
+	"AddBackward0
+0x7f60338d2e90" -> "DivBackward0
+0x7f60338e10d0"
+	"DivBackward0
+0x7f60338e10d0" -> "AddBackward0
+0x7f60338e1210"
+	"AddBackward0
+0x7f60338e1210" -> "AccumulateGrad
+0x7f60338e13d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1210" -> "MulBackward0
+0x7f60338e1410"
+	"MulBackward0
+0x7f60338e1410" -> "SoftmaxBackward
+0x7f60338e1810"
+	"SoftmaxBackward
+0x7f60338e1810" -> "AddBackward0
+0x7f60338e1650"
+	"AddBackward0
+0x7f60338e1650" -> "MmBackward
+0x7f60338e1390"
+	"MmBackward
+0x7f60338e1390" -> "TBackward
+0x7f60338e1a50"
+	"TBackward
+0x7f60338e1a50" -> "UnsqueezeBackward0
+0x7f60338e1bd0"
+	"UnsqueezeBackward0
+0x7f60338e1bd0" -> "SumBackward1
+0x7f60338e1c50"
+	"SumBackward1
+0x7f60338e1c50" -> "MulBackward0
+0x7f60338e1dd0"
+	"MulBackward0
+0x7f60338e1dd0" -> "AccumulateGrad
+0x7f60338e1fd0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1dd0" -> "None
+None"
+	"MmBackward
+0x7f60338e1390" -> "AccumulateGrad
+0x7f60338e13d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1650" -> "MmBackward
+0x7f60338e18d0"
+	"MmBackward
+0x7f60338e18d0" -> "TBackward
+0x7f60338e1cd0"
+	"TBackward
+0x7f60338e1cd0" -> "UnsqueezeBackward0
+0x7f60338e1c50"
+	"UnsqueezeBackward0
+0x7f60338e1c50" -> "SumBackward1
+0x7f60338e1e10"
+	"SumBackward1
+0x7f60338e1e10" -> "MulBackward0
+0x7f60338e1bd0"
+	"MulBackward0
+0x7f60338e1bd0" -> "AccumulateGrad
+0x7f60338e4110
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1bd0" -> "None
+None"
+	"MmBackward
+0x7f60338e18d0" -> "AccumulateGrad
+0x7f60338e1c90
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1410" -> "SigmoidBackward
+0x7f60338e17d0"
+	"SigmoidBackward
+0x7f60338e17d0" -> "AddBackward0
+0x7f60338e1990"
+	"AddBackward0
+0x7f60338e1990" -> "AddBackward0
+0x7f60338e1b50"
+	"AddBackward0
+0x7f60338e1b50" -> "MmBackward
+0x7f60338e1a50"
+	"MmBackward
+0x7f60338e1a50" -> "FusedDropoutBackward
+0x7f60338e1e10"
+	"FusedDropoutBackward
+0x7f60338e1e10" -> "AccumulateGrad
+0x7f60338e1e90
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1a50" -> "AccumulateGrad
+0x7f60338e13d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1b50" -> "MmBackward
+0x7f60338e18d0"
+	"MmBackward
+0x7f60338e18d0" -> "FusedDropoutBackward
+0x7f60338e1d90"
+	"FusedDropoutBackward
+0x7f60338e1d90" -> "AccumulateGrad
+0x7f60338e1c10
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e18d0" -> "AccumulateGrad
+0x7f60338e1c50
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1990" -> "MmBackward
+0x7f60338e1b10"
+	"MmBackward
+0x7f60338e1b10" -> "FusedDropoutBackward
+0x7f60338e1d10"
+	"FusedDropoutBackward
+0x7f60338e1d10" -> "AccumulateGrad
+0x7f60338e1e90
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1b10" -> "UnsqueezeBackward0
+0x7f60338e1a90"
+	"UnsqueezeBackward0
+0x7f60338e1a90" -> "SumBackward1
+0x7f60338e1e10"
+	"SumBackward1
+0x7f60338e1e10" -> "MulBackward0
+0x7f60338e1c90"
+	"MulBackward0
+0x7f60338e1c90" -> "AccumulateGrad
+0x7f60338e1c50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1c90" -> "None
+None"
+	"DivBackward0
+0x7f60338e10d0" -> "None
+None"
+	"AddBackward0
+0x7f60338d2e90" -> "MulBackward0
+0x7f60338e1050"
+	"MulBackward0
+0x7f60338e1050" -> "SoftmaxBackward
+0x7f60338e1490"
+	"SoftmaxBackward
+0x7f60338e1490" -> "AddBackward0
+0x7f60338e1510"
+	"AddBackward0
+0x7f60338e1510" -> "MmBackward
+0x7f60338e1850"
+	"MmBackward
+0x7f60338e1850" -> "TBackward
+0x7f60338e19d0"
+	"TBackward
+0x7f60338e19d0" -> "UnsqueezeBackward0
+0x7f60338e1ad0"
+	"UnsqueezeBackward0
+0x7f60338e1ad0" -> "SumBackward1
+0x7f60338e1990"
+	"SumBackward1
+0x7f60338e1990" -> "MulBackward0
+0x7f60338e1b10"
+	"MulBackward0
+0x7f60338e1b10" -> "AccumulateGrad
+0x7f60338e1cd0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1b10" -> "None
+None"
+	"MmBackward
+0x7f60338e1850" -> "DivBackward0
+0x7f60338e10d0"
+	"DivBackward0
+0x7f60338e10d0" -> "AddBackward0
+0x7f60338e1910"
+	"AddBackward0
+0x7f60338e1910" -> "AccumulateGrad
+0x7f60338e1a90
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1910" -> "MulBackward0
+0x7f60338e1ad0"
+	"MulBackward0
+0x7f60338e1ad0" -> "SoftmaxBackward
+0x7f60338e1bd0"
+	"SoftmaxBackward
+0x7f60338e1bd0" -> "AddBackward0
+0x7f60338e1f90"
+	"AddBackward0
+0x7f60338e1f90" -> "MmBackward
+0x7f60338e1cd0"
+	"MmBackward
+0x7f60338e1cd0" -> "TBackward
+0x7f60338e71d0"
+	"TBackward
+0x7f60338e71d0" -> "UnsqueezeBackward0
+0x7f60338e7210"
+	"UnsqueezeBackward0
+0x7f60338e7210" -> "SumBackward1
+0x7f60338e7310"
+	"SumBackward1
+0x7f60338e7310" -> "MulBackward0
+0x7f60338e7490"
+	"MulBackward0
+0x7f60338e7490" -> "AccumulateGrad
+0x7f60338e7690
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7490" -> "None
+None"
+	"MmBackward
+0x7f60338e1cd0" -> "AccumulateGrad
+0x7f60338e1a90
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1f90" -> "MmBackward
+0x7f60338e1ed0"
+	"MmBackward
+0x7f60338e1ed0" -> "TBackward
+0x7f60338e7390"
+	"TBackward
+0x7f60338e7390" -> "UnsqueezeBackward0
+0x7f60338e7790"
+	"UnsqueezeBackward0
+0x7f60338e7790" -> "SumBackward1
+0x7f60338e74d0"
+	"SumBackward1
+0x7f60338e74d0" -> "MulBackward0
+0x7f60338e7210"
+	"MulBackward0
+0x7f60338e7210" -> "AccumulateGrad
+0x7f60338e78d0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7210" -> "None
+None"
+	"MmBackward
+0x7f60338e1ed0" -> "AccumulateGrad
+0x7f60338e7350
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1ad0" -> "SigmoidBackward
+0x7f60338e1d10"
+	"SigmoidBackward
+0x7f60338e1d10" -> "AddBackward0
+0x7f60338e1c50"
+	"AddBackward0
+0x7f60338e1c50" -> "AddBackward0
+0x7f60338e1f90"
+	"AddBackward0
+0x7f60338e1f90" -> "MmBackward
+0x7f60338e7050"
+	"MmBackward
+0x7f60338e7050" -> "FusedDropoutBackward
+0x7f60338e75d0"
+	"FusedDropoutBackward
+0x7f60338e75d0" -> "AccumulateGrad
+0x7f60338e7550
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7050" -> "AccumulateGrad
+0x7f60338e1a90
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1f90" -> "MmBackward
+0x7f60338e7510"
+	"MmBackward
+0x7f60338e7510" -> "FusedDropoutBackward
+0x7f60338e7310"
+	"FusedDropoutBackward
+0x7f60338e7310" -> "AccumulateGrad
+0x7f60338e7450
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7510" -> "AccumulateGrad
+0x7f60338e7790
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1c50" -> "MmBackward
+0x7f60338e1d50"
+	"MmBackward
+0x7f60338e1d50" -> "FusedDropoutBackward
+0x7f60338e73d0"
+	"FusedDropoutBackward
+0x7f60338e73d0" -> "AccumulateGrad
+0x7f60338e75d0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1d50" -> "UnsqueezeBackward0
+0x7f60338e7190"
+	"UnsqueezeBackward0
+0x7f60338e7190" -> "SumBackward1
+0x7f60338e7790"
+	"SumBackward1
+0x7f60338e7790" -> "MulBackward0
+0x7f60338e7550"
+	"MulBackward0
+0x7f60338e7550" -> "AccumulateGrad
+0x7f60338e7990
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7550" -> "None
+None"
+	"DivBackward0
+0x7f60338e10d0" -> "None
+None"
+	"AddBackward0
+0x7f60338e1510" -> "MmBackward
+0x7f60338e1410"
+	"MmBackward
+0x7f60338e1410" -> "TBackward
+0x7f60338e1650"
+	"TBackward
+0x7f60338e1650" -> "UnsqueezeBackward0
+0x7f60338e1f50"
+	"UnsqueezeBackward0
+0x7f60338e1f50" -> "SumBackward1
+0x7f60338e1b90"
+	"SumBackward1
+0x7f60338e1b90" -> "MulBackward0
+0x7f60338e1390"
+	"MulBackward0
+0x7f60338e1390" -> "AccumulateGrad
+0x7f60338e1b50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1390" -> "None
+None"
+	"MmBackward
+0x7f60338e1410" -> "AccumulateGrad
+0x7f60338e1a10
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1050" -> "SigmoidBackward
+0x7f60338e1450"
+	"SigmoidBackward
+0x7f60338e1450" -> "AddBackward0
+0x7f60338e1690"
+	"AddBackward0
+0x7f60338e1690" -> "AddBackward0
+0x7f60338e1750"
+	"AddBackward0
+0x7f60338e1750" -> "MmBackward
+0x7f60338e19d0"
+	"MmBackward
+0x7f60338e19d0" -> "FusedDropoutBackward
+0x7f60338e1e10"
+	"FusedDropoutBackward
+0x7f60338e1e10" -> "AccumulateGrad
+0x7f60338e1e90
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e19d0" -> "DivBackward0
+0x7f60338e10d0"
+	"DivBackward0
+0x7f60338e10d0" -> "AddBackward0
+0x7f60338e1f10"
+	"AddBackward0
+0x7f60338e1f10" -> "AccumulateGrad
+0x7f60338e1bd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1f10" -> "MulBackward0
+0x7f60338e1e90"
+	"MulBackward0
+0x7f60338e1e90" -> "SoftmaxBackward
+0x7f60338e1cd0"
+	"SoftmaxBackward
+0x7f60338e1cd0" -> "AddBackward0
+0x7f60338e1a90"
+	"AddBackward0
+0x7f60338e1a90" -> "MmBackward
+0x7f60338e7290"
+	"MmBackward
+0x7f60338e7290" -> "TBackward
+0x7f60338e7190"
+	"TBackward
+0x7f60338e7190" -> "UnsqueezeBackward0
+0x7f60338e74d0"
+	"UnsqueezeBackward0
+0x7f60338e74d0" -> "SumBackward1
+0x7f60338e7350"
+	"SumBackward1
+0x7f60338e7350" -> "MulBackward0
+0x7f60338e7210"
+	"MulBackward0
+0x7f60338e7210" -> "AccumulateGrad
+0x7f60338e7490
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7210" -> "None
+None"
+	"MmBackward
+0x7f60338e7290" -> "AccumulateGrad
+0x7f60338e1bd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1a90" -> "MmBackward
+0x7f60338e7050"
+	"MmBackward
+0x7f60338e7050" -> "TBackward
+0x7f60338e7a90"
+	"TBackward
+0x7f60338e7a90" -> "UnsqueezeBackward0
+0x7f60338e7a50"
+	"UnsqueezeBackward0
+0x7f60338e7a50" -> "SumBackward1
+0x7f60338e75d0"
+	"SumBackward1
+0x7f60338e75d0" -> "MulBackward0
+0x7f60338e74d0"
+	"MulBackward0
+0x7f60338e74d0" -> "AccumulateGrad
+0x7f60338e7890
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e74d0" -> "None
+None"
+	"MmBackward
+0x7f60338e7050" -> "AccumulateGrad
+0x7f60338e7650
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1e90" -> "SigmoidBackward
+0x7f60338e1ed0"
+	"SigmoidBackward
+0x7f60338e1ed0" -> "AddBackward0
+0x7f60338e1a90"
+	"AddBackward0
+0x7f60338e1a90" -> "AddBackward0
+0x7f60338e7150"
+	"AddBackward0
+0x7f60338e7150" -> "MmBackward
+0x7f60338e7190"
+	"MmBackward
+0x7f60338e7190" -> "FusedDropoutBackward
+0x7f60338e7710"
+	"FusedDropoutBackward
+0x7f60338e7710" -> "AccumulateGrad
+0x7f60338e7810
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7190" -> "AccumulateGrad
+0x7f60338e1bd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7150" -> "MmBackward
+0x7f60338e7050"
+	"MmBackward
+0x7f60338e7050" -> "FusedDropoutBackward
+0x7f60338e7350"
+	"FusedDropoutBackward
+0x7f60338e7350" -> "AccumulateGrad
+0x7f60338e7450
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7050" -> "AccumulateGrad
+0x7f60338e7a50
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1a90" -> "MmBackward
+0x7f60338e77d0"
+	"MmBackward
+0x7f60338e77d0" -> "FusedDropoutBackward
+0x7f60338e7590"
+	"FusedDropoutBackward
+0x7f60338e7590" -> "AccumulateGrad
+0x7f60338e7710
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e77d0" -> "UnsqueezeBackward0
+0x7f60338e7750"
+	"UnsqueezeBackward0
+0x7f60338e7750" -> "SumBackward1
+0x7f60338e7a50"
+	"SumBackward1
+0x7f60338e7a50" -> "MulBackward0
+0x7f60338e7810"
+	"MulBackward0
+0x7f60338e7810" -> "AccumulateGrad
+0x7f60338e7b50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7810" -> "None
+None"
+	"DivBackward0
+0x7f60338e10d0" -> "None
+None"
+	"AddBackward0
+0x7f60338e1750" -> "MmBackward
+0x7f60338e1410"
+	"MmBackward
+0x7f60338e1410" -> "FusedDropoutBackward
+0x7f60338e1d90"
+	"FusedDropoutBackward
+0x7f60338e1d90" -> "AccumulateGrad
+0x7f60338e1b10
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1410" -> "AccumulateGrad
+0x7f60338e1f50
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1690" -> "MmBackward
+0x7f60338e1790"
+	"MmBackward
+0x7f60338e1790" -> "FusedDropoutBackward
+0x7f60338e1950"
+	"FusedDropoutBackward
+0x7f60338e1950" -> "AccumulateGrad
+0x7f60338e1e10
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1790" -> "UnsqueezeBackward0
+0x7f60338e17d0"
+	"UnsqueezeBackward0
+0x7f60338e17d0" -> "SumBackward1
+0x7f60338e1f50"
+	"SumBackward1
+0x7f60338e1f50" -> "MulBackward0
+0x7f60338e1990"
+	"MulBackward0
+0x7f60338e1990" -> "AccumulateGrad
+0x7f60338e1910
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1990" -> "None
+None"
+	"DivBackward0
+0x7f60338d2b50" -> "None
+None"
+	"AddBackward0
+0x7f60338d2c10" -> "MulBackward0
+0x7f60338d2d90"
+	"MulBackward0
+0x7f60338d2d90" -> "SoftmaxBackward
+0x7f60338d2d10"
+	"SoftmaxBackward
+0x7f60338d2d10" -> "AddBackward0
+0x7f60338e1110"
+	"AddBackward0
+0x7f60338e1110" -> "MmBackward
+0x7f60338e1610"
+	"MmBackward
+0x7f60338e1610" -> "TBackward
+0x7f60338e1550"
+	"TBackward
+0x7f60338e1550" -> "UnsqueezeBackward0
+0x7f60338e1590"
+	"UnsqueezeBackward0
+0x7f60338e1590" -> "SumBackward1
+0x7f60338e1690"
+	"SumBackward1
+0x7f60338e1690" -> "MulBackward0
+0x7f60338e1790"
+	"MulBackward0
+0x7f60338e1790" -> "AccumulateGrad
+0x7f60338e1650
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1790" -> "None
+None"
+	"MmBackward
+0x7f60338e1610" -> "DivBackward0
+0x7f60338d2b50"
+	"DivBackward0
+0x7f60338d2b50" -> "AddBackward0
+0x7f60338e1710"
+	"AddBackward0
+0x7f60338e1710" -> "DivBackward0
+0x7f60338e17d0"
+	"DivBackward0
+0x7f60338e17d0" -> "AddBackward0
+0x7f60338e1690"
+	"AddBackward0
+0x7f60338e1690" -> "AccumulateGrad
+0x7f60338e1a10
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1690" -> "MulBackward0
+0x7f60338e1f50"
+	"MulBackward0
+0x7f60338e1f50" -> "SoftmaxBackward
+0x7f60338e1390"
+	"SoftmaxBackward
+0x7f60338e1390" -> "AddBackward0
+0x7f60338e1d50"
+	"AddBackward0
+0x7f60338e1d50" -> "MmBackward
+0x7f60338e1ed0"
+	"MmBackward
+0x7f60338e1ed0" -> "TBackward
+0x7f60338e7110"
+	"TBackward
+0x7f60338e7110" -> "UnsqueezeBackward0
+0x7f60338e7190"
+	"UnsqueezeBackward0
+0x7f60338e7190" -> "SumBackward1
+0x7f60338e77d0"
+	"SumBackward1
+0x7f60338e77d0" -> "MulBackward0
+0x7f60338e7750"
+	"MulBackward0
+0x7f60338e7750" -> "AccumulateGrad
+0x7f60338e7650
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7750" -> "None
+None"
+	"MmBackward
+0x7f60338e1ed0" -> "AccumulateGrad
+0x7f60338e1a10
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1d50" -> "MmBackward
+0x7f60338e1c50"
+	"MmBackward
+0x7f60338e1c50" -> "TBackward
+0x7f60338e7510"
+	"TBackward
+0x7f60338e7510" -> "UnsqueezeBackward0
+0x7f60338e7810"
+	"UnsqueezeBackward0
+0x7f60338e7810" -> "SumBackward1
+0x7f60338e7850"
+	"SumBackward1
+0x7f60338e7850" -> "MulBackward0
+0x7f60338e7190"
+	"MulBackward0
+0x7f60338e7190" -> "AccumulateGrad
+0x7f60338e7a10
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7190" -> "None
+None"
+	"MmBackward
+0x7f60338e1c50" -> "AccumulateGrad
+0x7f60338e7290
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1f50" -> "SigmoidBackward
+0x7f60338e1cd0"
+	"SigmoidBackward
+0x7f60338e1cd0" -> "AddBackward0
+0x7f60338e1b50"
+	"AddBackward0
+0x7f60338e1b50" -> "AddBackward0
+0x7f60338e1d50"
+	"AddBackward0
+0x7f60338e1d50" -> "MmBackward
+0x7f60338e72d0"
+	"MmBackward
+0x7f60338e72d0" -> "FusedDropoutBackward
+0x7f60338e7350"
+	"FusedDropoutBackward
+0x7f60338e7350" -> "AccumulateGrad
+0x7f60338e79d0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e72d0" -> "AccumulateGrad
+0x7f60338e1a10
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1d50" -> "MmBackward
+0x7f60338e7a90"
+	"MmBackward
+0x7f60338e7a90" -> "FusedDropoutBackward
+0x7f60338e77d0"
+	"FusedDropoutBackward
+0x7f60338e77d0" -> "AccumulateGrad
+0x7f60338e7050
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7a90" -> "AccumulateGrad
+0x7f60338e7810
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1b50" -> "MmBackward
+0x7f60338e1fd0"
+	"MmBackward
+0x7f60338e1fd0" -> "FusedDropoutBackward
+0x7f60338e7250"
+	"FusedDropoutBackward
+0x7f60338e7250" -> "AccumulateGrad
+0x7f60338e7350
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1fd0" -> "UnsqueezeBackward0
+0x7f60338e71d0"
+	"UnsqueezeBackward0
+0x7f60338e71d0" -> "SumBackward1
+0x7f60338e7810"
+	"SumBackward1
+0x7f60338e7810" -> "MulBackward0
+0x7f60338e79d0"
+	"MulBackward0
+0x7f60338e79d0" -> "AccumulateGrad
+0x7f60338e7b50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e79d0" -> "None
+None"
+	"DivBackward0
+0x7f60338e17d0" -> "None
+None"
+	"AddBackward0
+0x7f60338e1710" -> "MulBackward0
+0x7f60338e1590"
+	"MulBackward0
+0x7f60338e1590" -> "SoftmaxBackward
+0x7f60338e1f90"
+	"SoftmaxBackward
+0x7f60338e1f90" -> "AddBackward0
+0x7f60338e1e90"
+	"AddBackward0
+0x7f60338e1e90" -> "MmBackward
+0x7f60338e1f10"
+	"MmBackward
+0x7f60338e1f10" -> "TBackward
+0x7f60338e1910"
+	"TBackward
+0x7f60338e1910" -> "UnsqueezeBackward0
+0x7f60338e1c50"
+	"UnsqueezeBackward0
+0x7f60338e1c50" -> "SumBackward1
+0x7f60338e1fd0"
+	"SumBackward1
+0x7f60338e1fd0" -> "MulBackward0
+0x7f60338e72d0"
+	"MulBackward0
+0x7f60338e72d0" -> "AccumulateGrad
+0x7f60338e7510
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e72d0" -> "None
+None"
+	"MmBackward
+0x7f60338e1f10" -> "DivBackward0
+0x7f60338e17d0"
+	"DivBackward0
+0x7f60338e17d0" -> "AddBackward0
+0x7f60338e1c50"
+	"AddBackward0
+0x7f60338e1c50" -> "AccumulateGrad
+0x7f60338e1fd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1c50" -> "MulBackward0
+0x7f60338e7090"
+	"MulBackward0
+0x7f60338e7090" -> "SoftmaxBackward
+0x7f60338e7190"
+	"SoftmaxBackward
+0x7f60338e7190" -> "AddBackward0
+0x7f60338e7690"
+	"AddBackward0
+0x7f60338e7690" -> "MmBackward
+0x7f60338e7510"
+	"MmBackward
+0x7f60338e7510" -> "TBackward
+0x7f60338e7c50"
+	"TBackward
+0x7f60338e7c50" -> "UnsqueezeBackward0
+0x7f60338e7710"
+	"UnsqueezeBackward0
+0x7f60338e7710" -> "SumBackward1
+0x7f60338e7950"
+	"SumBackward1
+0x7f60338e7950" -> "MulBackward0
+0x7f60338e7c10"
+	"MulBackward0
+0x7f60338e7c10" -> "AccumulateGrad
+0x7f60338e7d10
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7c10" -> "None
+None"
+	"MmBackward
+0x7f60338e7510" -> "AccumulateGrad
+0x7f60338e1fd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7690" -> "MmBackward
+0x7f60338e7650"
+	"MmBackward
+0x7f60338e7650" -> "TBackward
+0x7f60338e7410"
+	"TBackward
+0x7f60338e7410" -> "UnsqueezeBackward0
+0x7f60338e7e10"
+	"UnsqueezeBackward0
+0x7f60338e7e10" -> "SumBackward1
+0x7f60338e7c90"
+	"SumBackward1
+0x7f60338e7c90" -> "MulBackward0
+0x7f60338e7710"
+	"MulBackward0
+0x7f60338e7710" -> "AccumulateGrad
+0x7f60338e7f50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7710" -> "None
+None"
+	"MmBackward
+0x7f60338e7650" -> "AccumulateGrad
+0x7f60338e7210
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e7090" -> "SigmoidBackward
+0x7f60338e7250"
+	"SigmoidBackward
+0x7f60338e7250" -> "AddBackward0
+0x7f60338e7a50"
+	"AddBackward0
+0x7f60338e7a50" -> "AddBackward0
+0x7f60338e7750"
+	"AddBackward0
+0x7f60338e7750" -> "MmBackward
+0x7f60338e7c50"
+	"MmBackward
+0x7f60338e7c50" -> "FusedDropoutBackward
+0x7f60338e76d0"
+	"FusedDropoutBackward
+0x7f60338e76d0" -> "AccumulateGrad
+0x7f60338e7b10
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7c50" -> "AccumulateGrad
+0x7f60338e1fd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7750" -> "MmBackward
+0x7f60338e7650"
+	"MmBackward
+0x7f60338e7650" -> "FusedDropoutBackward
+0x7f60338e7950"
+	"FusedDropoutBackward
+0x7f60338e7950" -> "AccumulateGrad
+0x7f60338e7890
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7650" -> "AccumulateGrad
+0x7f60338e7e10
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7a50" -> "MmBackward
+0x7f60338e7a10"
+	"MmBackward
+0x7f60338e7a10" -> "FusedDropoutBackward
+0x7f60338e78d0"
+	"FusedDropoutBackward
+0x7f60338e78d0" -> "AccumulateGrad
+0x7f60338e76d0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7a10" -> "UnsqueezeBackward0
+0x7f60338e7b50"
+	"UnsqueezeBackward0
+0x7f60338e7b50" -> "SumBackward1
+0x7f60338e7e10"
+	"SumBackward1
+0x7f60338e7e10" -> "MulBackward0
+0x7f60338e7b10"
+	"MulBackward0
+0x7f60338e7b10" -> "AccumulateGrad
+0x7f60338e7fd0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7b10" -> "None
+None"
+	"DivBackward0
+0x7f60338e17d0" -> "None
+None"
+	"AddBackward0
+0x7f60338e1e90" -> "MmBackward
+0x7f60338e1f50"
+	"MmBackward
+0x7f60338e1f50" -> "TBackward
+0x7f60338e1d50"
+	"TBackward
+0x7f60338e1d50" -> "UnsqueezeBackward0
+0x7f60338e1fd0"
+	"UnsqueezeBackward0
+0x7f60338e1fd0" -> "SumBackward1
+0x7f60338e7910"
+	"SumBackward1
+0x7f60338e7910" -> "MulBackward0
+0x7f60338e70d0"
+	"MulBackward0
+0x7f60338e70d0" -> "AccumulateGrad
+0x7f60338e7590
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e70d0" -> "None
+None"
+	"MmBackward
+0x7f60338e1f50" -> "AccumulateGrad
+0x7f60338e1c90
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1590" -> "SigmoidBackward
+0x7f60338e1950"
+	"SigmoidBackward
+0x7f60338e1950" -> "AddBackward0
+0x7f60338e1ad0"
+	"AddBackward0
+0x7f60338e1ad0" -> "AddBackward0
+0x7f60338e1390"
+	"AddBackward0
+0x7f60338e1390" -> "MmBackward
+0x7f60338e1ed0"
+	"MmBackward
+0x7f60338e1ed0" -> "FusedDropoutBackward
+0x7f60338e1d50"
+	"FusedDropoutBackward
+0x7f60338e1d50" -> "AccumulateGrad
+0x7f60338e7250
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1ed0" -> "DivBackward0
+0x7f60338e17d0"
+	"DivBackward0
+0x7f60338e17d0" -> "AddBackward0
+0x7f60338e72d0"
+	"AddBackward0
+0x7f60338e72d0" -> "AccumulateGrad
+0x7f60338e7810
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e72d0" -> "MulBackward0
+0x7f60338e7250"
+	"MulBackward0
+0x7f60338e7250" -> "SoftmaxBackward
+0x7f60338e77d0"
+	"SoftmaxBackward
+0x7f60338e77d0" -> "AddBackward0
+0x7f60338e70d0"
+	"AddBackward0
+0x7f60338e70d0" -> "MmBackward
+0x7f60338e74d0"
+	"MmBackward
+0x7f60338e74d0" -> "TBackward
+0x7f60338e7b50"
+	"TBackward
+0x7f60338e7b50" -> "UnsqueezeBackward0
+0x7f60338e7c90"
+	"UnsqueezeBackward0
+0x7f60338e7c90" -> "SumBackward1
+0x7f60338e7210"
+	"SumBackward1
+0x7f60338e7210" -> "MulBackward0
+0x7f60338e7710"
+	"MulBackward0
+0x7f60338e7710" -> "AccumulateGrad
+0x7f60338e7d50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7710" -> "None
+None"
+	"MmBackward
+0x7f60338e74d0" -> "AccumulateGrad
+0x7f60338e7810
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e70d0" -> "MmBackward
+0x7f60338e7a10"
+	"MmBackward
+0x7f60338e7a10" -> "TBackward
+0x7f60338e7f10"
+	"TBackward
+0x7f60338e7f10" -> "UnsqueezeBackward0
+0x7f60338e7f50"
+	"UnsqueezeBackward0
+0x7f60338e7f50" -> "SumBackward1
+0x7f60338e76d0"
+	"SumBackward1
+0x7f60338e76d0" -> "MulBackward0
+0x7f60338e7c90"
+	"MulBackward0
+0x7f60338e7c90" -> "AccumulateGrad
+0x7f60338e7d90
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7c90" -> "None
+None"
+	"MmBackward
+0x7f60338e7a10" -> "AccumulateGrad
+0x7f60338e7cd0
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e7250" -> "SigmoidBackward
+0x7f60338e7c50"
+	"SigmoidBackward
+0x7f60338e7c50" -> "AddBackward0
+0x7f60338e7ad0"
+	"AddBackward0
+0x7f60338e7ad0" -> "AddBackward0
+0x7f60338e7f90"
+	"AddBackward0
+0x7f60338e7f90" -> "MmBackward
+0x7f60338e7b50"
+	"MmBackward
+0x7f60338e7b50" -> "FusedDropoutBackward
+0x7f60338e7d50"
+	"FusedDropoutBackward
+0x7f60338e7d50" -> "AccumulateGrad
+0x7f60338e7e90
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7b50" -> "AccumulateGrad
+0x7f60338e7810
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7f90" -> "MmBackward
+0x7f60338e7a10"
+	"MmBackward
+0x7f60338e7a10" -> "FusedDropoutBackward
+0x7f60338e7210"
+	"FusedDropoutBackward
+0x7f60338e7210" -> "AccumulateGrad
+0x7f60338e7710
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7a10" -> "AccumulateGrad
+0x7f60338e7f50
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e7ad0" -> "MmBackward
+0x7f60338e7410"
+	"MmBackward
+0x7f60338e7410" -> "FusedDropoutBackward
+0x7f60338e7610"
+	"FusedDropoutBackward
+0x7f60338e7610" -> "AccumulateGrad
+0x7f60338e7d50
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e7410" -> "UnsqueezeBackward0
+0x7f60338e7dd0"
+	"UnsqueezeBackward0
+0x7f60338e7dd0" -> "SumBackward1
+0x7f60338e7f50"
+	"SumBackward1
+0x7f60338e7f50" -> "MulBackward0
+0x7f60338e7c90"
+	"MulBackward0
+0x7f60338e7c90" -> "AccumulateGrad
+0x7f60338e7b90
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e7c90" -> "None
+None"
+	"DivBackward0
+0x7f60338e17d0" -> "None
+None"
+	"AddBackward0
+0x7f60338e1390" -> "MmBackward
+0x7f60338e1b50"
+	"MmBackward
+0x7f60338e1b50" -> "FusedDropoutBackward
+0x7f60338e1fd0"
+	"FusedDropoutBackward
+0x7f60338e1fd0" -> "AccumulateGrad
+0x7f60338e71d0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1b50" -> "AccumulateGrad
+0x7f60338e1d50
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1ad0" -> "MmBackward
+0x7f60338e1650"
+	"MmBackward
+0x7f60338e1650" -> "FusedDropoutBackward
+0x7f60338e1a90"
+	"FusedDropoutBackward
+0x7f60338e1a90" -> "AccumulateGrad
+0x7f60338e1ed0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1650" -> "UnsqueezeBackward0
+0x7f60338e1b50"
+	"UnsqueezeBackward0
+0x7f60338e1b50" -> "SumBackward1
+0x7f60338e1ed0"
+	"SumBackward1
+0x7f60338e1ed0" -> "MulBackward0
+0x7f60338e73d0"
+	"MulBackward0
+0x7f60338e73d0" -> "AccumulateGrad
+0x7f60338e7550
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e73d0" -> "None
+None"
+	"DivBackward0
+0x7f60338d2b50" -> "None
+None"
+	"AddBackward0
+0x7f60338e1110" -> "MmBackward
+0x7f60338e1050"
+	"MmBackward
+0x7f60338e1050" -> "TBackward
+0x7f60338e1510"
+	"TBackward
+0x7f60338e1510" -> "UnsqueezeBackward0
+0x7f60338e1b90"
+	"UnsqueezeBackward0
+0x7f60338e1b90" -> "SumBackward1
+0x7f60338e1810"
+	"SumBackward1
+0x7f60338e1810" -> "MulBackward0
+0x7f60338e1850"
+	"MulBackward0
+0x7f60338e1850" -> "AccumulateGrad
+0x7f60338e1750
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1850" -> "None
+None"
+	"MmBackward
+0x7f60338e1050" -> "AccumulateGrad
+0x7f60338e13d0
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338d2d90" -> "SigmoidBackward
+0x7f60338d2e90"
+	"SigmoidBackward
+0x7f60338d2e90" -> "AddBackward0
+0x7f60338e1310"
+	"AddBackward0
+0x7f60338e1310" -> "AddBackward0
+0x7f60338e1250"
+	"AddBackward0
+0x7f60338e1250" -> "MmBackward
+0x7f60338e1550"
+	"MmBackward
+0x7f60338e1550" -> "FusedDropoutBackward
+0x7f60338e1950"
+	"FusedDropoutBackward
+0x7f60338e1950" -> "AccumulateGrad
+0x7f60338e1990
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1550" -> "DivBackward0
+0x7f60338d2b50"
+	"DivBackward0
+0x7f60338d2b50" -> "AddBackward0
+0x7f60338e1d10"
+	"AddBackward0
+0x7f60338e1d10" -> "DivBackward0
+0x7f60338e1c10"
+	"DivBackward0
+0x7f60338e1c10" -> "AddBackward0
+0x7f60338e1f10"
+	"AddBackward0
+0x7f60338e1f10" -> "AccumulateGrad
+0x7f60338e17d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1f10" -> "MulBackward0
+0x7f60338e1750"
+	"MulBackward0
+0x7f60338e1750" -> "SoftmaxBackward
+0x7f60338e1d50"
+	"SoftmaxBackward
+0x7f60338e1d50" -> "AddBackward0
+0x7f60338e1910"
+	"AddBackward0
+0x7f60338e1910" -> "MmBackward
+0x7f60338f1110"
+	"MmBackward
+0x7f60338f1110" -> "TBackward
+0x7f60338f12d0"
+	"TBackward
+0x7f60338f12d0" -> "UnsqueezeBackward0
+0x7f60338f1450"
+	"UnsqueezeBackward0
+0x7f60338f1450" -> "SumBackward1
+0x7f60338f14d0"
+	"SumBackward1
+0x7f60338f14d0" -> "MulBackward0
+0x7f60338f1650"
+	"MulBackward0
+0x7f60338f1650" -> "AccumulateGrad
+0x7f60338f1850
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1650" -> "None
+None"
+	"MmBackward
+0x7f60338f1110" -> "AccumulateGrad
+0x7f60338e17d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1910" -> "MmBackward
+0x7f60338f1150"
+	"MmBackward
+0x7f60338f1150" -> "TBackward
+0x7f60338f1550"
+	"TBackward
+0x7f60338f1550" -> "UnsqueezeBackward0
+0x7f60338f1950"
+	"UnsqueezeBackward0
+0x7f60338f1950" -> "SumBackward1
+0x7f60338f1690"
+	"SumBackward1
+0x7f60338f1690" -> "MulBackward0
+0x7f60338f1450"
+	"MulBackward0
+0x7f60338f1450" -> "AccumulateGrad
+0x7f60338f1a90
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1450" -> "None
+None"
+	"MmBackward
+0x7f60338f1150" -> "AccumulateGrad
+0x7f60338f1510
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1750" -> "SigmoidBackward
+0x7f60338e1e10"
+	"SigmoidBackward
+0x7f60338e1e10" -> "AddBackward0
+0x7f60338e1910"
+	"AddBackward0
+0x7f60338e1910" -> "AddBackward0
+0x7f60338f11d0"
+	"AddBackward0
+0x7f60338f11d0" -> "MmBackward
+0x7f60338f12d0"
+	"MmBackward
+0x7f60338f12d0" -> "FusedDropoutBackward
+0x7f60338f1790"
+	"FusedDropoutBackward
+0x7f60338f1790" -> "AccumulateGrad
+0x7f60338f1710
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f12d0" -> "AccumulateGrad
+0x7f60338e17d0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f11d0" -> "MmBackward
+0x7f60338f1150"
+	"MmBackward
+0x7f60338f1150" -> "FusedDropoutBackward
+0x7f60338f14d0"
+	"FusedDropoutBackward
+0x7f60338f14d0" -> "AccumulateGrad
+0x7f60338f1610
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1150" -> "AccumulateGrad
+0x7f60338f1950
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1910" -> "MmBackward
+0x7f60338f1190"
+	"MmBackward
+0x7f60338f1190" -> "FusedDropoutBackward
+0x7f60338f1590"
+	"FusedDropoutBackward
+0x7f60338f1590" -> "AccumulateGrad
+0x7f60338f1790
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1190" -> "UnsqueezeBackward0
+0x7f60338f1310"
+	"UnsqueezeBackward0
+0x7f60338f1310" -> "SumBackward1
+0x7f60338f1950"
+	"SumBackward1
+0x7f60338f1950" -> "MulBackward0
+0x7f60338f1710"
+	"MulBackward0
+0x7f60338f1710" -> "AccumulateGrad
+0x7f60338f1b50
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1710" -> "None
+None"
+	"DivBackward0
+0x7f60338e1c10" -> "None
+None"
+	"AddBackward0
+0x7f60338e1d10" -> "MulBackward0
+0x7f60338e1990"
+	"MulBackward0
+0x7f60338e1990" -> "SoftmaxBackward
+0x7f60338e1a50"
+	"SoftmaxBackward
+0x7f60338e1a50" -> "AddBackward0
+0x7f60338e1e90"
+	"AddBackward0
+0x7f60338e1e90" -> "MmBackward
+0x7f60338e1fd0"
+	"MmBackward
+0x7f60338e1fd0" -> "TBackward
+0x7f60338e1d50"
+	"TBackward
+0x7f60338e1d50" -> "UnsqueezeBackward0
+0x7f60338f1250"
+	"UnsqueezeBackward0
+0x7f60338f1250" -> "SumBackward1
+0x7f60338f13d0"
+	"SumBackward1
+0x7f60338f13d0" -> "MulBackward0
+0x7f60338f1190"
+	"MulBackward0
+0x7f60338f1190" -> "AccumulateGrad
+0x7f60338f1550
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1190" -> "None
+None"
+	"MmBackward
+0x7f60338e1fd0" -> "DivBackward0
+0x7f60338e1c10"
+	"DivBackward0
+0x7f60338e1c10" -> "AddBackward0
+0x7f60338f1290"
+	"AddBackward0
+0x7f60338f1290" -> "AccumulateGrad
+0x7f60338f1310
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1290" -> "MulBackward0
+0x7f60338f1250"
+	"MulBackward0
+0x7f60338f1250" -> "SoftmaxBackward
+0x7f60338f1450"
+	"SoftmaxBackward
+0x7f60338f1450" -> "AddBackward0
+0x7f60338f1910"
+	"AddBackward0
+0x7f60338f1910" -> "MmBackward
+0x7f60338f1550"
+	"MmBackward
+0x7f60338f1550" -> "TBackward
+0x7f60338f18d0"
+	"TBackward
+0x7f60338f18d0" -> "UnsqueezeBackward0
+0x7f60338f1a10"
+	"UnsqueezeBackward0
+0x7f60338f1a10" -> "SumBackward1
+0x7f60338f1c90"
+	"SumBackward1
+0x7f60338f1c90" -> "MulBackward0
+0x7f60338f1cd0"
+	"MulBackward0
+0x7f60338f1cd0" -> "AccumulateGrad
+0x7f60338f1ed0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1cd0" -> "None
+None"
+	"MmBackward
+0x7f60338f1550" -> "AccumulateGrad
+0x7f60338f1310
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1910" -> "MmBackward
+0x7f60338f1850"
+	"MmBackward
+0x7f60338f1850" -> "TBackward
+0x7f60338f1b10"
+	"TBackward
+0x7f60338f1b10" -> "UnsqueezeBackward0
+0x7f60338f1fd0"
+	"UnsqueezeBackward0
+0x7f60338f1fd0" -> "SumBackward1
+0x7f60338f1d10"
+	"SumBackward1
+0x7f60338f1d10" -> "MulBackward0
+0x7f60338f1a10"
+	"MulBackward0
+0x7f60338f1a10" -> "AccumulateGrad
+0x7f60338f1e10
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1a10" -> "None
+None"
+	"MmBackward
+0x7f60338f1850" -> "AccumulateGrad
+0x7f60338f1bd0
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338f1250" -> "SigmoidBackward
+0x7f60338f1590"
+	"SigmoidBackward
+0x7f60338f1590" -> "AddBackward0
+0x7f60338f1810"
+	"AddBackward0
+0x7f60338f1810" -> "AddBackward0
+0x7f60338f1650"
+	"AddBackward0
+0x7f60338f1650" -> "MmBackward
+0x7f60338f18d0"
+	"MmBackward
+0x7f60338f18d0" -> "FusedDropoutBackward
+0x7f60338f1ed0"
+	"FusedDropoutBackward
+0x7f60338f1ed0" -> "AccumulateGrad
+0x7f60338f1d90
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f18d0" -> "AccumulateGrad
+0x7f60338f1310
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1650" -> "MmBackward
+0x7f60338f1850"
+	"MmBackward
+0x7f60338f1850" -> "FusedDropoutBackward
+0x7f60338f1c90"
+	"FusedDropoutBackward
+0x7f60338f1c90" -> "AccumulateGrad
+0x7f60338f1cd0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1850" -> "AccumulateGrad
+0x7f60338f1fd0
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1810" -> "MmBackward
+0x7f60338f1a90"
+	"MmBackward
+0x7f60338f1a90" -> "FusedDropoutBackward
+0x7f60338f1890"
+	"FusedDropoutBackward
+0x7f60338f1890" -> "AccumulateGrad
+0x7f60338f1ed0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1a90" -> "UnsqueezeBackward0
+0x7f60338f1b50"
+	"UnsqueezeBackward0
+0x7f60338f1b50" -> "SumBackward1
+0x7f60338f1fd0"
+	"SumBackward1
+0x7f60338f1fd0" -> "MulBackward0
+0x7f60338f1a10"
+	"MulBackward0
+0x7f60338f1a10" -> "AccumulateGrad
+0x7f60338f1f10
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1a10" -> "None
+None"
+	"DivBackward0
+0x7f60338e1c10" -> "None
+None"
+	"AddBackward0
+0x7f60338e1e90" -> "MmBackward
+0x7f60338e1b50"
+	"MmBackward
+0x7f60338e1b50" -> "TBackward
+0x7f60338e1910"
+	"TBackward
+0x7f60338e1910" -> "UnsqueezeBackward0
+0x7f60338f1410"
+	"UnsqueezeBackward0
+0x7f60338f1410" -> "SumBackward1
+0x7f60338f1050"
+	"SumBackward1
+0x7f60338f1050" -> "MulBackward0
+0x7f60338f1110"
+	"MulBackward0
+0x7f60338f1110" -> "AccumulateGrad
+0x7f60338f11d0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1110" -> "None
+None"
+	"MmBackward
+0x7f60338e1b50" -> "AccumulateGrad
+0x7f60338e1d50
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338e1990" -> "SigmoidBackward
+0x7f60338e1650"
+	"SigmoidBackward
+0x7f60338e1650" -> "AddBackward0
+0x7f60338e17d0"
+	"AddBackward0
+0x7f60338e17d0" -> "AddBackward0
+0x7f60338e1a90"
+	"AddBackward0
+0x7f60338e1a90" -> "MmBackward
+0x7f60338e1fd0"
+	"MmBackward
+0x7f60338e1fd0" -> "FusedDropoutBackward
+0x7f60338f1090"
+	"FusedDropoutBackward
+0x7f60338f1090" -> "AccumulateGrad
+0x7f60338f1710
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1fd0" -> "DivBackward0
+0x7f60338e1c10"
+	"DivBackward0
+0x7f60338e1c10" -> "AddBackward0
+0x7f60338f1750"
+	"AddBackward0
+0x7f60338f1750" -> "AccumulateGrad
+0x7f60338f1950
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1750" -> "MulBackward0
+0x7f60338f1710"
+	"MulBackward0
+0x7f60338f1710" -> "SoftmaxBackward
+0x7f60338f13d0"
+	"SoftmaxBackward
+0x7f60338f13d0" -> "AddBackward0
+0x7f60338f1110"
+	"AddBackward0
+0x7f60338f1110" -> "MmBackward
+0x7f60338f19d0"
+	"MmBackward
+0x7f60338f19d0" -> "TBackward
+0x7f60338f1b50"
+	"TBackward
+0x7f60338f1b50" -> "UnsqueezeBackward0
+0x7f60338f1e90"
+	"UnsqueezeBackward0
+0x7f60338f1e90" -> "SumBackward1
+0x7f60338f1bd0"
+	"SumBackward1
+0x7f60338f1bd0" -> "MulBackward0
+0x7f60338f1ed0"
+	"MulBackward0
+0x7f60338f1ed0" -> "AccumulateGrad
+0x7f60338f50d0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1ed0" -> "None
+None"
+	"MmBackward
+0x7f60338f19d0" -> "AccumulateGrad
+0x7f60338f1950
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1110" -> "MmBackward
+0x7f60338f1a90"
+	"MmBackward
+0x7f60338f1a90" -> "TBackward
+0x7f60338f1f50"
+	"TBackward
+0x7f60338f1f50" -> "UnsqueezeBackward0
+0x7f60338f1dd0"
+	"UnsqueezeBackward0
+0x7f60338f1dd0" -> "SumBackward1
+0x7f60338f1c10"
+	"SumBackward1
+0x7f60338f1c10" -> "MulBackward0
+0x7f60338f1e10"
+	"MulBackward0
+0x7f60338f1e10" -> "AccumulateGrad
+0x7f60338f5090
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1e10" -> "None
+None"
+	"MmBackward
+0x7f60338f1a90" -> "AccumulateGrad
+0x7f60338f1cd0
+torch.Size([64, 20])"
+	"MulBackward0
+0x7f60338f1710" -> "SigmoidBackward
+0x7f60338f18d0"
+	"SigmoidBackward
+0x7f60338f18d0" -> "AddBackward0
+0x7f60338f1490"
+	"AddBackward0
+0x7f60338f1490" -> "AddBackward0
+0x7f60338f1e50"
+	"AddBackward0
+0x7f60338f1e50" -> "MmBackward
+0x7f60338f1b50"
+	"MmBackward
+0x7f60338f1b50" -> "FusedDropoutBackward
+0x7f60338f1e90"
+	"FusedDropoutBackward
+0x7f60338f1e90" -> "AccumulateGrad
+0x7f60338f1fd0
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1b50" -> "AccumulateGrad
+0x7f60338f1950
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1e50" -> "MmBackward
+0x7f60338f1a90"
+	"MmBackward
+0x7f60338f1a90" -> "FusedDropoutBackward
+0x7f60338f1bd0"
+	"FusedDropoutBackward
+0x7f60338f1bd0" -> "AccumulateGrad
+0x7f60338f1a50
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1a90" -> "AccumulateGrad
+0x7f60338f1d90
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338f1490" -> "MmBackward
+0x7f60338f1b10"
+	"MmBackward
+0x7f60338f1b10" -> "FusedDropoutBackward
+0x7f60338f1a10"
+	"FusedDropoutBackward
+0x7f60338f1a10" -> "AccumulateGrad
+0x7f60338f1f10
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338f1b10" -> "UnsqueezeBackward0
+0x7f60338f1f90"
+	"UnsqueezeBackward0
+0x7f60338f1f90" -> "SumBackward1
+0x7f60338f1e90"
+	"SumBackward1
+0x7f60338f1e90" -> "MulBackward0
+0x7f60338f1c10"
+	"MulBackward0
+0x7f60338f1c10" -> "AccumulateGrad
+0x7f60338f1bd0
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1c10" -> "None
+None"
+	"DivBackward0
+0x7f60338e1c10" -> "None
+None"
+	"AddBackward0
+0x7f60338e1a90" -> "MmBackward
+0x7f60338e1d50"
+	"MmBackward
+0x7f60338e1d50" -> "FusedDropoutBackward
+0x7f60338f1610"
+	"FusedDropoutBackward
+0x7f60338f1610" -> "AccumulateGrad
+0x7f60338f1190
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1d50" -> "AccumulateGrad
+0x7f60338f1410
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e17d0" -> "MmBackward
+0x7f60338e1e90"
+	"MmBackward
+0x7f60338e1e90" -> "FusedDropoutBackward
+0x7f60338e1d50"
+	"FusedDropoutBackward
+0x7f60338e1d50" -> "AccumulateGrad
+0x7f60338f1590
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1e90" -> "UnsqueezeBackward0
+0x7f60338e1fd0"
+	"UnsqueezeBackward0
+0x7f60338e1fd0" -> "SumBackward1
+0x7f60338f1410"
+	"SumBackward1
+0x7f60338f1410" -> "MulBackward0
+0x7f60338f1150"
+	"MulBackward0
+0x7f60338f1150" -> "AccumulateGrad
+0x7f60338f1290
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338f1150" -> "None
+None"
+	"DivBackward0
+0x7f60338d2b50" -> "None
+None"
+	"AddBackward0
+0x7f60338e1250" -> "MmBackward
+0x7f60338e1050"
+	"MmBackward
+0x7f60338e1050" -> "FusedDropoutBackward
+0x7f60338e1e50"
+	"FusedDropoutBackward
+0x7f60338e1e50" -> "AccumulateGrad
+0x7f60338e1790
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1050" -> "AccumulateGrad
+0x7f60338e1b90
+torch.Size([64, 20])"
+	"AddBackward0
+0x7f60338e1310" -> "MmBackward
+0x7f60338e1210"
+	"MmBackward
+0x7f60338e1210" -> "FusedDropoutBackward
+0x7f60338e16d0"
+	"FusedDropoutBackward
+0x7f60338e16d0" -> "AccumulateGrad
+0x7f60338e1950
+torch.Size([64, 64])"
+	"MmBackward
+0x7f60338e1210" -> "UnsqueezeBackward0
+0x7f60338e1450"
+	"UnsqueezeBackward0
+0x7f60338e1450" -> "SumBackward1
+0x7f60338e1b90"
+	"SumBackward1
+0x7f60338e1b90" -> "MulBackward0
+0x7f60338e1690"
+	"MulBackward0
+0x7f60338e1690" -> "AccumulateGrad
+0x7f60338e1710
+torch.Size([64, 10])"
+	"MulBackward0
+0x7f60338e1690" -> "None
+None"
+	"DivBackward0
+0x7f60338d2a10" -> "None
+None"
+}
