@@ -48,7 +48,7 @@ class Test_entNet_Model(nn.Module):
         self.new_H = nn.Sigmoid()(torch.mm(self.dropout(self.params['X']), self.H) +
                                   torch.mm(self.dropout(self.params['Y']), self.W) +
                                   torch.mm(self.dropout(self.params['Z']), self.s))  # (64*m)
-        self.H = unitVector_2d(self.H + torch.mul(self.G, self.new_H), dim=0)  # (64*m)
+        # self.H = unitVector_2d(self.H + torch.mul(self.G, self.new_H), dim=0)  # (64*m)
 
     def answer(self, Q):
         Q.requires_grad_()
