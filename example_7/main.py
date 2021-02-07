@@ -81,7 +81,7 @@ fake_question = nn.init.normal_(torch.empty(identity_size['Q'], dtype=torch.floa
 H = model(fake_sentences)
 ans = model.answer(fake_question)
 
-CG.recursive_loop(ans.grad_fn)
-CG.save(file_name="Testing", view=True)
+CG.recursive_loop(ans.grad_fn, path='')
+CG.save(file_name="Testing", view=False)
 
 print()

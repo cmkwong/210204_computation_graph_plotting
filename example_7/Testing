@@ -1,426 +1,4314 @@
 // Computation Graph
 digraph {
 	"LogSoftmaxBackward
-0x7f4b62af79d0" -> "TBackward
-0x7f4ae4411bd0"
+0x7f33e2269650" -> "TBackward
+0x7f33e255ee10"
 	"TBackward
-0x7f4ae4411bd0" -> "MmBackward
-0x7f4ae412fe50"
+0x7f33e255ee10" -> "MmBackward
+0x7f33e2269690"
 	"MmBackward
-0x7f4ae412fe50" -> "ViewBackward
-0x7f4ae413b110"
+0x7f33e2269690" -> "ViewBackward
+0x7f33e2286190"
 	"ViewBackward
-0x7f4ae413b110" -> "AccumulateGrad
+0x7f33e2286190" -> "AccumulateGrad
 (2, 10, 64)" [label=R]
 	"MmBackward
-0x7f4ae412fe50" -> "SigmoidBackward
-0x7f4ae413b150"
+0x7f33e2269690" -> "SigmoidBackward
+0x7f33e2286090"
 	"SigmoidBackward
-0x7f4ae413b150" -> "AddBackward0
-0x7f4ae413b450"
+0x7f33e2286090" -> "AddBackward0
+0x7f33e2286490"
 	"AddBackward0
-0x7f4ae413b450" -> "UnsqueezeBackward0
-0x7f4ae413b5d0"
+0x7f33e2286490" -> "UnsqueezeBackward0
+0x7f33e2286610"
 	"UnsqueezeBackward0
-0x7f4ae413b5d0" -> "SumBackward1
-0x7f4ae413b410"
+0x7f33e2286610" -> "SumBackward1
+0x7f33e2286450"
 	"SumBackward1
-0x7f4ae413b410" -> "MulBackward0
-0x7f4ae413b710"
+0x7f33e2286450" -> "MulBackward0
+0x7f33e2286750"
 	"MulBackward0
-0x7f4ae413b710" -> "ViewBackward
-0x7f4ae413b490"
+0x7f33e2286750" -> "ViewBackward
+0x7f33e22864d0"
 	"ViewBackward
-0x7f4ae413b490" -> "AccumulateGrad
+0x7f33e22864d0" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413b710" -> "ViewBackward
-0x7f4ae413b810"
+0x7f33e2286750" -> "ViewBackward
+0x7f33e2286850"
 	"ViewBackward
-0x7f4ae413b810" -> "AccumulateGrad
+0x7f33e2286850" -> "AccumulateGrad
 (5, 64, 2)" [label=Q]
 	"AddBackward0
-0x7f4ae413b450" -> "MmBackward
-0x7f4ae413b290"
+0x7f33e2286490" -> "MmBackward
+0x7f33e22862d0"
 	"MmBackward
-0x7f4ae413b290" -> "ViewBackward
-0x7f4ae413b790"
+0x7f33e22862d0" -> "ViewBackward
+0x7f33e22867d0"
 	"ViewBackward
-0x7f4ae413b790" -> "AccumulateGrad
+0x7f33e22867d0" -> "AccumulateGrad
 (64, 1, 64)" [label=K]
 	"MmBackward
-0x7f4ae413b290" -> "UnsqueezeBackward0
-0x7f4ae413b910"
+0x7f33e22862d0" -> "UnsqueezeBackward0
+0x7f33e2286950"
 	"UnsqueezeBackward0
-0x7f4ae413b910" -> "SumBackward1
-0x7f4ae413b9d0"
+0x7f33e2286950" -> "SumBackward1
+0x7f33e2286a10"
 	"SumBackward1
-0x7f4ae413b9d0" -> "MulBackward0
-0x7f4ae413bd10"
+0x7f33e2286a10" -> "MulBackward0
+0x7f33e2286d50"
 	"MulBackward0
-0x7f4ae413bd10" -> "SoftmaxBackward
-0x7f4ae413bad0"
+0x7f33e2286d50" -> "SoftmaxBackward
+0x7f33e2286b10"
 	"SoftmaxBackward
-0x7f4ae413bad0" -> "MmBackward
-0x7f4ae413bcd0"
+0x7f33e2286b10" -> "MmBackward
+0x7f33e2286d10"
 	"MmBackward
-0x7f4ae413bcd0" -> "TBackward
-0x7f4ae413bd50"
+0x7f33e2286d10" -> "TBackward
+0x7f33e2286d90"
 	"TBackward
-0x7f4ae413bd50" -> "UnsqueezeBackward0
-0x7f4ae413b5d0"
+0x7f33e2286d90" -> "UnsqueezeBackward0
+0x7f33e2286610"
 	"UnsqueezeBackward0
-0x7f4ae413b5d0" -> "SumBackward1
-0x7f4ae413be90"
+0x7f33e2286610" -> "SumBackward1
+0x7f33e2286ed0"
 	"SumBackward1
-0x7f4ae413be90" -> "MulBackward0
-0x7f4ae413e050"
+0x7f33e2286ed0" -> "MulBackward0
+0x7f33e2290090"
 	"MulBackward0
-0x7f4ae413e050" -> "ViewBackward
-0x7f4ae413e290"
+0x7f33e2290090" -> "ViewBackward
+0x7f33e22902d0"
 	"ViewBackward
-0x7f4ae413e290" -> "AccumulateGrad
+0x7f33e22902d0" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413e050" -> "ViewBackward
-0x7f4ae413e390"
+0x7f33e2290090" -> "ViewBackward
+0x7f33e22903d0"
 	"ViewBackward
-0x7f4ae413e390" -> "AccumulateGrad
+0x7f33e22903d0" -> "AccumulateGrad
 (5, 64, 2)" [label=Q]
 	"MmBackward
-0x7f4ae413bcd0" -> "DivBackward0
-0x7f4ae413b7d0"
+0x7f33e2286d10" -> "DivBackward0
+0x7f33e2286810"
 	"DivBackward0
-0x7f4ae413b7d0" -> "AddBackward0
-0x7f4ae413be50"
+0x7f33e2286810" -> "AddBackward0
+0x7f33e2286e90"
 	"AddBackward0
-0x7f4ae413be50" -> "ViewBackward
-0x7f4ae413e610"
+0x7f33e2286e90" -> "DivBackward0
+0x7f33e2290650"
+	"DivBackward0
+0x7f33e2290650" -> "AddBackward0
+0x7f33e2290350"
+	"AddBackward0
+0x7f33e2290350" -> "DivBackward0
+0x7f33e2290410"
+	"DivBackward0
+0x7f33e2290410" -> "AddBackward0
+0x7f33e2290490"
+	"AddBackward0
+0x7f33e2290490" -> "ViewBackward
+0x7f33e22907d0"
 	"ViewBackward
-0x7f4ae413e610" -> "AccumulateGrad
+0x7f33e22907d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413be50" -> "MulBackward0
-0x7f4ae413e110"
+0x7f33e2290490" -> "MulBackward0
+0x7f33e2290710"
 	"MulBackward0
-0x7f4ae413e110" -> "SoftmaxBackward
-0x7f4ae413e390"
+0x7f33e2290710" -> "SoftmaxBackward
+0x7f33e2290bd0"
 	"SoftmaxBackward
-0x7f4ae413e390" -> "AddBackward0
-0x7f4ae413e8d0"
+0x7f33e2290bd0" -> "AddBackward0
+0x7f33e2290d10"
 	"AddBackward0
-0x7f4ae413e8d0" -> "MmBackward
-0x7f4ae413e250"
+0x7f33e2290d10" -> "MmBackward
+0x7f33e2290b10"
 	"MmBackward
-0x7f4ae413e250" -> "TBackward
-0x7f4ae413e6d0"
+0x7f33e2290b10" -> "TBackward
+0x7f33e2290e50"
 	"TBackward
-0x7f4ae413e6d0" -> "UnsqueezeBackward0
-0x7f4ae413e910"
+0x7f33e2290e50" -> "UnsqueezeBackward0
+0x7f33e2290fd0"
 	"UnsqueezeBackward0
-0x7f4ae413e910" -> "SumBackward1
-0x7f4ae413e990"
+0x7f33e2290fd0" -> "SumBackward1
+0x7f33e2297090"
 	"SumBackward1
-0x7f4ae413e990" -> "MulBackward0
-0x7f4ae413eb10"
+0x7f33e2297090" -> "MulBackward0
+0x7f33e2297210"
 	"MulBackward0
-0x7f4ae413eb10" -> "ViewBackward
-0x7f4ae413ed10"
+0x7f33e2297210" -> "ViewBackward
+0x7f33e2297410"
 	"ViewBackward
-0x7f4ae413ed10" -> "AccumulateGrad
+0x7f33e2297410" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413eb10" -> "ViewBackward
-0x7f4ae413ed50"
+0x7f33e2297210" -> "ViewBackward
+0x7f33e2297450"
 	"ViewBackward
-0x7f4ae413ed50" -> "AccumulateGrad
+0x7f33e2297450" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"MmBackward
-0x7f4ae413e250" -> "ViewBackward
-0x7f4ae413e610"
+0x7f33e2290b10" -> "ViewBackward
+0x7f33e22907d0"
 	"ViewBackward
-0x7f4ae413e610" -> "AccumulateGrad
+0x7f33e22907d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413e8d0" -> "MmBackward
-0x7f4ae413e690"
+0x7f33e2290d10" -> "MmBackward
+0x7f33e2290b50"
 	"MmBackward
-0x7f4ae413e690" -> "TBackward
-0x7f4ae413ea10"
+0x7f33e2290b50" -> "TBackward
+0x7f33e2290e90"
 	"TBackward
-0x7f4ae413ea10" -> "UnsqueezeBackward0
-0x7f4ae413ee10"
+0x7f33e2290e90" -> "UnsqueezeBackward0
+0x7f33e2297110"
 	"UnsqueezeBackward0
-0x7f4ae413ee10" -> "SumBackward1
-0x7f4ae413ead0"
+0x7f33e2297110" -> "SumBackward1
+0x7f33e2297690"
 	"SumBackward1
-0x7f4ae413ead0" -> "MulBackward0
-0x7f4ae413e950"
+0x7f33e2297690" -> "MulBackward0
+0x7f33e2297050"
 	"MulBackward0
-0x7f4ae413e950" -> "ViewBackward
-0x7f4ae413ef50"
+0x7f33e2297050" -> "ViewBackward
+0x7f33e2297650"
 	"ViewBackward
-0x7f4ae413ef50" -> "AccumulateGrad
+0x7f33e2297650" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413e950" -> "ViewBackward
-0x7f4ae413eb10"
+0x7f33e2297050" -> "ViewBackward
+0x7f33e2297210"
 	"ViewBackward
-0x7f4ae413eb10" -> "AccumulateGrad
+0x7f33e2297210" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"MmBackward
-0x7f4ae413e690" -> "ViewBackward
-0x7f4ae413e9d0"
+0x7f33e2290b50" -> "ViewBackward
+0x7f33e2290fd0"
 	"ViewBackward
-0x7f4ae413e9d0" -> "AccumulateGrad
+0x7f33e2290fd0" -> "AccumulateGrad
 (4, 16, 20)" [label=W]
 	"MulBackward0
-0x7f4ae413e110" -> "SigmoidBackward
-0x7f4ae413e550"
+0x7f33e2290710" -> "SigmoidBackward
+0x7f33e2290b90"
 	"SigmoidBackward
-0x7f4ae413e550" -> "AddBackward0
-0x7f4ae413e290"
+0x7f33e2290b90" -> "AddBackward0
+0x7f33e2290cd0"
 	"AddBackward0
-0x7f4ae413e290" -> "AddBackward0
-0x7f4ae413e490"
+0x7f33e2290cd0" -> "AddBackward0
+0x7f33e2290f10"
 	"AddBackward0
-0x7f4ae413e490" -> "MmBackward
-0x7f4ae413e6d0"
+0x7f33e2290f10" -> "MmBackward
+0x7f33e2290f90"
 	"MmBackward
-0x7f4ae413e6d0" -> "FusedDropoutBackward
-0x7f4ae413ec50"
+0x7f33e2290f90" -> "FusedDropoutBackward
+0x7f33e2297190"
 	"FusedDropoutBackward
-0x7f4ae413ec50" -> "ViewBackward
-0x7f4ae413eed0"
+0x7f33e2297190" -> "ViewBackward
+0x7f33e2297490"
 	"ViewBackward
-0x7f4ae413eed0" -> "AccumulateGrad
+0x7f33e2297490" -> "AccumulateGrad
 (8, 8, 64)" [label=X]
 	"MmBackward
-0x7f4ae413e6d0" -> "ViewBackward
-0x7f4ae413e610"
+0x7f33e2290f90" -> "ViewBackward
+0x7f33e22907d0"
 	"ViewBackward
-0x7f4ae413e610" -> "AccumulateGrad
+0x7f33e22907d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413e490" -> "MmBackward
-0x7f4ae413e690"
+0x7f33e2290f10" -> "MmBackward
+0x7f33e2290f50"
 	"MmBackward
-0x7f4ae413e690" -> "FusedDropoutBackward
-0x7f4ae413ec90"
+0x7f33e2290f50" -> "FusedDropoutBackward
+0x7f33e2297250"
 	"FusedDropoutBackward
-0x7f4ae413ec90" -> "ViewBackward
-0x7f4ae413ed10"
+0x7f33e2297250" -> "ViewBackward
+0x7f33e2297410"
 	"ViewBackward
-0x7f4ae413ed10" -> "AccumulateGrad
+0x7f33e2297410" -> "AccumulateGrad
 (16, 4, 64)" [label=Y]
 	"MmBackward
-0x7f4ae413e690" -> "ViewBackward
-0x7f4ae413ea90"
+0x7f33e2290f50" -> "ViewBackward
+0x7f33e22970d0"
 	"ViewBackward
-0x7f4ae413ea90" -> "AccumulateGrad
+0x7f33e22970d0" -> "AccumulateGrad
 (4, 16, 20)" [label=W]
 	"AddBackward0
-0x7f4ae413e290" -> "MmBackward
-0x7f4ae413e850"
+0x7f33e2290cd0" -> "MmBackward
+0x7f33e2290ed0"
 	"MmBackward
-0x7f4ae413e850" -> "FusedDropoutBackward
-0x7f4ae413ea50"
+0x7f33e2290ed0" -> "FusedDropoutBackward
+0x7f33e2290f50"
 	"FusedDropoutBackward
-0x7f4ae413ea50" -> "ViewBackward
-0x7f4ae413ec50"
+0x7f33e2290f50" -> "ViewBackward
+0x7f33e2297350"
 	"ViewBackward
-0x7f4ae413ec50" -> "AccumulateGrad
+0x7f33e2297350" -> "AccumulateGrad
 (32, 2, 64)" [label=Z]
 	"MmBackward
-0x7f4ae413e850" -> "UnsqueezeBackward0
-0x7f4ae413e890"
+0x7f33e2290ed0" -> "UnsqueezeBackward0
+0x7f33e2290f90"
 	"UnsqueezeBackward0
-0x7f4ae413e890" -> "SumBackward1
-0x7f4ae413ea90"
+0x7f33e2290f90" -> "SumBackward1
+0x7f33e22970d0"
 	"SumBackward1
-0x7f4ae413ea90" -> "MulBackward0
-0x7f4ae413eed0"
+0x7f33e22970d0" -> "MulBackward0
+0x7f33e22977d0"
 	"MulBackward0
-0x7f4ae413eed0" -> "ViewBackward
-0x7f4ae413ed10"
+0x7f33e22977d0" -> "ViewBackward
+0x7f33e2297410"
 	"ViewBackward
-0x7f4ae413ed10" -> "AccumulateGrad
+0x7f33e2297410" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413eed0" -> "ViewBackward
-0x7f4ae413ead0"
+0x7f33e22977d0" -> "ViewBackward
+0x7f33e2297690"
 	"ViewBackward
-0x7f4ae413ead0" -> "AccumulateGrad
+0x7f33e2297690" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"DivBackward0
-0x7f4ae413b7d0" -> "None
+0x7f33e2290410" -> "None
+None"
+	"AddBackward0
+0x7f33e2290350" -> "MulBackward0
+0x7f33e2290290"
+	"MulBackward0
+0x7f33e2290290" -> "SoftmaxBackward
+0x7f33e22904d0"
+	"SoftmaxBackward
+0x7f33e22904d0" -> "AddBackward0
+0x7f33e2290810"
+	"AddBackward0
+0x7f33e2290810" -> "MmBackward
+0x7f33e2290990"
+	"MmBackward
+0x7f33e2290990" -> "TBackward
+0x7f33e2290d90"
+	"TBackward
+0x7f33e2290d90" -> "UnsqueezeBackward0
+0x7f33e2290b10"
+	"UnsqueezeBackward0
+0x7f33e2290b10" -> "SumBackward1
+0x7f33e2290cd0"
+	"SumBackward1
+0x7f33e2290cd0" -> "MulBackward0
+0x7f33e2290fd0"
+	"MulBackward0
+0x7f33e2290fd0" -> "ViewBackward
+0x7f33e22a0110"
+	"ViewBackward
+0x7f33e22a0110" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290fd0" -> "ViewBackward
+0x7f33e22a0150"
+	"ViewBackward
+0x7f33e22a0150" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290990" -> "DivBackward0
+0x7f33e2290410"
+	"DivBackward0
+0x7f33e2290410" -> "AddBackward0
+0x7f33e2290f10"
+	"AddBackward0
+0x7f33e2290f10" -> "ViewBackward
+0x7f33e2290b10"
+	"ViewBackward
+0x7f33e2290b10" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290f10" -> "MulBackward0
+0x7f33e2290f50"
+	"MulBackward0
+0x7f33e2290f50" -> "SoftmaxBackward
+0x7f33e22a0310"
+	"SoftmaxBackward
+0x7f33e22a0310" -> "AddBackward0
+0x7f33e22a0110"
+	"AddBackward0
+0x7f33e22a0110" -> "MmBackward
+0x7f33e22a0250"
+	"MmBackward
+0x7f33e22a0250" -> "TBackward
+0x7f33e22a05d0"
+	"TBackward
+0x7f33e22a05d0" -> "UnsqueezeBackward0
+0x7f33e22a04d0"
+	"UnsqueezeBackward0
+0x7f33e22a04d0" -> "SumBackward1
+0x7f33e22a0750"
+	"SumBackward1
+0x7f33e22a0750" -> "MulBackward0
+0x7f33e22a08d0"
+	"MulBackward0
+0x7f33e22a08d0" -> "ViewBackward
+0x7f33e22a0ad0"
+	"ViewBackward
+0x7f33e22a0ad0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e22a08d0" -> "ViewBackward
+0x7f33e22a0b10"
+	"ViewBackward
+0x7f33e22a0b10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e22a0250" -> "ViewBackward
+0x7f33e2290b10"
+	"ViewBackward
+0x7f33e2290b10" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e22a0110" -> "MmBackward
+0x7f33e22a0050"
+	"MmBackward
+0x7f33e22a0050" -> "TBackward
+0x7f33e22a07d0"
+	"TBackward
+0x7f33e22a07d0" -> "UnsqueezeBackward0
+0x7f33e22a0bd0"
+	"UnsqueezeBackward0
+0x7f33e22a0bd0" -> "SumBackward1
+0x7f33e22a0890"
+	"SumBackward1
+0x7f33e22a0890" -> "MulBackward0
+0x7f33e22a0710"
+	"MulBackward0
+0x7f33e22a0710" -> "ViewBackward
+0x7f33e22a0d10"
+	"ViewBackward
+0x7f33e22a0d10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e22a0710" -> "ViewBackward
+0x7f33e22a08d0"
+	"ViewBackward
+0x7f33e22a08d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e22a0050" -> "ViewBackward
+0x7f33e22a0790"
+	"ViewBackward
+0x7f33e22a0790" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290f50" -> "SigmoidBackward
+0x7f33e22a0450"
+	"SigmoidBackward
+0x7f33e22a0450" -> "AddBackward0
+0x7f33e22a0190"
+	"AddBackward0
+0x7f33e22a0190" -> "AddBackward0
+0x7f33e22a0690"
+	"AddBackward0
+0x7f33e22a0690" -> "MmBackward
+0x7f33e22a05d0"
+	"MmBackward
+0x7f33e22a05d0" -> "FusedDropoutBackward
+0x7f33e22a0a10"
+	"FusedDropoutBackward
+0x7f33e22a0a10" -> "ViewBackward
+0x7f33e22a0b50"
+	"ViewBackward
+0x7f33e22a0b50" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e22a05d0" -> "ViewBackward
+0x7f33e2290b10"
+	"ViewBackward
+0x7f33e2290b10" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e22a0690" -> "MmBackward
+0x7f33e22a0050"
+	"MmBackward
+0x7f33e22a0050" -> "FusedDropoutBackward
+0x7f33e22a0a50"
+	"FusedDropoutBackward
+0x7f33e22a0a50" -> "ViewBackward
+0x7f33e22a0c50"
+	"ViewBackward
+0x7f33e22a0c50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e22a0050" -> "ViewBackward
+0x7f33e22a0850"
+	"ViewBackward
+0x7f33e22a0850" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e22a0190" -> "MmBackward
+0x7f33e22a06d0"
+	"MmBackward
+0x7f33e22a06d0" -> "FusedDropoutBackward
+0x7f33e22a0810"
+	"FusedDropoutBackward
+0x7f33e22a0810" -> "ViewBackward
+0x7f33e22a0a10"
+	"ViewBackward
+0x7f33e22a0a10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e22a06d0" -> "UnsqueezeBackward0
+0x7f33e22a0510"
+	"UnsqueezeBackward0
+0x7f33e22a0510" -> "SumBackward1
+0x7f33e22a0850"
+	"SumBackward1
+0x7f33e22a0850" -> "MulBackward0
+0x7f33e22a0fd0"
+	"MulBackward0
+0x7f33e22a0fd0" -> "ViewBackward
+0x7f33e22a0c50"
+	"ViewBackward
+0x7f33e22a0c50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e22a0fd0" -> "ViewBackward
+0x7f33e22a0890"
+	"ViewBackward
+0x7f33e22a0890" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290410" -> "None
+None"
+	"AddBackward0
+0x7f33e2290810" -> "MmBackward
+0x7f33e2290710"
+	"MmBackward
+0x7f33e2290710" -> "TBackward
+0x7f33e2290d10"
+	"TBackward
+0x7f33e2290d10" -> "UnsqueezeBackward0
+0x7f33e2290ed0"
+	"UnsqueezeBackward0
+0x7f33e2290ed0" -> "SumBackward1
+0x7f33e2290e10"
+	"SumBackward1
+0x7f33e2290e10" -> "MulBackward0
+0x7f33e2290f10"
+	"MulBackward0
+0x7f33e2290f10" -> "ViewBackward
+0x7f33e22a0350"
+	"ViewBackward
+0x7f33e22a0350" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290f10" -> "ViewBackward
+0x7f33e22a0390"
+	"ViewBackward
+0x7f33e22a0390" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290710" -> "ViewBackward
+0x7f33e2290fd0"
+	"ViewBackward
+0x7f33e2290fd0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290290" -> "SigmoidBackward
+0x7f33e2290890"
+	"SigmoidBackward
+0x7f33e2290890" -> "AddBackward0
+0x7f33e2290a50"
+	"AddBackward0
+0x7f33e2290a50" -> "AddBackward0
+0x7f33e2290c50"
+	"AddBackward0
+0x7f33e2290c50" -> "MmBackward
+0x7f33e2290d90"
+	"MmBackward
+0x7f33e2290d90" -> "FusedDropoutBackward
+0x7f33e2290cd0"
+	"FusedDropoutBackward
+0x7f33e2290cd0" -> "ViewBackward
+0x7f33e2290b50"
+	"ViewBackward
+0x7f33e2290b50" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e2290d90" -> "DivBackward0
+0x7f33e2290410"
+	"DivBackward0
+0x7f33e2290410" -> "AddBackward0
+0x7f33e2290b50"
+	"AddBackward0
+0x7f33e2290b50" -> "ViewBackward
+0x7f33e2290ed0"
+	"ViewBackward
+0x7f33e2290ed0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290b50" -> "MulBackward0
+0x7f33d8f67110"
+	"MulBackward0
+0x7f33d8f67110" -> "SoftmaxBackward
+0x7f33d8f674d0"
+	"SoftmaxBackward
+0x7f33d8f674d0" -> "AddBackward0
+0x7f33d8f67610"
+	"AddBackward0
+0x7f33d8f67610" -> "MmBackward
+0x7f33d8f67390"
+	"MmBackward
+0x7f33d8f67390" -> "TBackward
+0x7f33d8f67750"
+	"TBackward
+0x7f33d8f67750" -> "UnsqueezeBackward0
+0x7f33d8f678d0"
+	"UnsqueezeBackward0
+0x7f33d8f678d0" -> "SumBackward1
+0x7f33d8f67950"
+	"SumBackward1
+0x7f33d8f67950" -> "MulBackward0
+0x7f33d8f67ad0"
+	"MulBackward0
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f67cd0"
+	"ViewBackward
+0x7f33d8f67cd0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f67d10"
+	"ViewBackward
+0x7f33d8f67d10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67390" -> "ViewBackward
+0x7f33e2290ed0"
+	"ViewBackward
+0x7f33e2290ed0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67610" -> "MmBackward
+0x7f33d8f67450"
+	"MmBackward
+0x7f33d8f67450" -> "TBackward
+0x7f33d8f679d0"
+	"TBackward
+0x7f33d8f679d0" -> "UnsqueezeBackward0
+0x7f33d8f67dd0"
+	"UnsqueezeBackward0
+0x7f33d8f67dd0" -> "SumBackward1
+0x7f33d8f67a90"
+	"SumBackward1
+0x7f33d8f67a90" -> "MulBackward0
+0x7f33d8f67910"
+	"MulBackward0
+0x7f33d8f67910" -> "ViewBackward
+0x7f33d8f67f10"
+	"ViewBackward
+0x7f33d8f67f10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67910" -> "ViewBackward
+0x7f33d8f67ad0"
+	"ViewBackward
+0x7f33d8f67ad0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67450" -> "ViewBackward
+0x7f33d8f67990"
+	"ViewBackward
+0x7f33d8f67990" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f67110" -> "SigmoidBackward
+0x7f33d8f67490"
+	"SigmoidBackward
+0x7f33d8f67490" -> "AddBackward0
+0x7f33d8f675d0"
+	"AddBackward0
+0x7f33d8f675d0" -> "AddBackward0
+0x7f33d8f67810"
+	"AddBackward0
+0x7f33d8f67810" -> "MmBackward
+0x7f33d8f67750"
+	"MmBackward
+0x7f33d8f67750" -> "FusedDropoutBackward
+0x7f33d8f67c10"
+	"FusedDropoutBackward
+0x7f33d8f67c10" -> "ViewBackward
+0x7f33d8f67e90"
+	"ViewBackward
+0x7f33d8f67e90" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f67750" -> "ViewBackward
+0x7f33e2290ed0"
+	"ViewBackward
+0x7f33e2290ed0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67810" -> "MmBackward
+0x7f33d8f67450"
+	"MmBackward
+0x7f33d8f67450" -> "FusedDropoutBackward
+0x7f33d8f67c50"
+	"FusedDropoutBackward
+0x7f33d8f67c50" -> "ViewBackward
+0x7f33d8f67f90"
+	"ViewBackward
+0x7f33d8f67f90" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f67450" -> "ViewBackward
+0x7f33d8f67a50"
+	"ViewBackward
+0x7f33d8f67a50" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f675d0" -> "MmBackward
+0x7f33d8f677d0"
+	"MmBackward
+0x7f33d8f677d0" -> "FusedDropoutBackward
+0x7f33d8f67a10"
+	"FusedDropoutBackward
+0x7f33d8f67a10" -> "ViewBackward
+0x7f33d8f67c10"
+	"ViewBackward
+0x7f33d8f67c10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f677d0" -> "UnsqueezeBackward0
+0x7f33d8f67790"
+	"UnsqueezeBackward0
+0x7f33d8f67790" -> "SumBackward1
+0x7f33d8f67a50"
+	"SumBackward1
+0x7f33d8f67a50" -> "MulBackward0
+0x7f33d8f67d10"
+	"MulBackward0
+0x7f33d8f67d10" -> "ViewBackward
+0x7f33d8f67f90"
+	"ViewBackward
+0x7f33d8f67f90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67d10" -> "ViewBackward
+0x7f33d8f67a90"
+	"ViewBackward
+0x7f33d8f67a90" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290410" -> "None
+None"
+	"AddBackward0
+0x7f33e2290c50" -> "MmBackward
+0x7f33e2290710"
+	"MmBackward
+0x7f33e2290710" -> "FusedDropoutBackward
+0x7f33e2290e10"
+	"FusedDropoutBackward
+0x7f33e2290e10" -> "ViewBackward
+0x7f33e2290cd0"
+	"ViewBackward
+0x7f33e2290cd0" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e2290710" -> "ViewBackward
+0x7f33e2290c90"
+	"ViewBackward
+0x7f33e2290c90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290a50" -> "MmBackward
+0x7f33e2290c10"
+	"MmBackward
+0x7f33e2290c10" -> "FusedDropoutBackward
+0x7f33e2290d10"
+	"FusedDropoutBackward
+0x7f33e2290d10" -> "ViewBackward
+0x7f33e2290f10"
+	"ViewBackward
+0x7f33e2290f10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e2290c10" -> "UnsqueezeBackward0
+0x7f33e2290e90"
+	"UnsqueezeBackward0
+0x7f33e2290e90" -> "SumBackward1
+0x7f33e2290e10"
+	"SumBackward1
+0x7f33e2290e10" -> "MulBackward0
+0x7f33e2290cd0"
+	"MulBackward0
+0x7f33e2290cd0" -> "ViewBackward
+0x7f33e2290ed0"
+	"ViewBackward
+0x7f33e2290ed0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290cd0" -> "ViewBackward
+0x7f33d8f67490"
+	"ViewBackward
+0x7f33d8f67490" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290650" -> "None
+None"
+	"AddBackward0
+0x7f33e2286e90" -> "MulBackward0
+0x7f33e2290150"
+	"MulBackward0
+0x7f33e2290150" -> "SoftmaxBackward
+0x7f33e22903d0"
+	"SoftmaxBackward
+0x7f33e22903d0" -> "AddBackward0
+0x7f33e22905d0"
+	"AddBackward0
+0x7f33e22905d0" -> "MmBackward
+0x7f33e2290a10"
+	"MmBackward
+0x7f33e2290a10" -> "TBackward
+0x7f33e22908d0"
+	"TBackward
+0x7f33e22908d0" -> "UnsqueezeBackward0
+0x7f33e2290d50"
+	"UnsqueezeBackward0
+0x7f33e2290d50" -> "SumBackward1
+0x7f33e2290a50"
+	"SumBackward1
+0x7f33e2290a50" -> "MulBackward0
+0x7f33e2290c10"
+	"MulBackward0
+0x7f33e2290c10" -> "ViewBackward
+0x7f33e2290fd0"
+	"ViewBackward
+0x7f33e2290fd0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290c10" -> "ViewBackward
+0x7f33e2290710"
+	"ViewBackward
+0x7f33e2290710" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290a10" -> "DivBackward0
+0x7f33e2290650"
+	"DivBackward0
+0x7f33e2290650" -> "AddBackward0
+0x7f33e2290950"
+	"AddBackward0
+0x7f33e2290950" -> "DivBackward0
+0x7f33e2290e90"
+	"DivBackward0
+0x7f33e2290e90" -> "AddBackward0
+0x7f33e2290a50"
+	"AddBackward0
+0x7f33e2290a50" -> "ViewBackward
+0x7f33e2290b90"
+	"ViewBackward
+0x7f33e2290b90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290a50" -> "MulBackward0
+0x7f33e2290710"
+	"MulBackward0
+0x7f33e2290710" -> "SoftmaxBackward
+0x7f33d8f67410"
+	"SoftmaxBackward
+0x7f33d8f67410" -> "AddBackward0
+0x7f33d8f67550"
+	"AddBackward0
+0x7f33d8f67550" -> "MmBackward
+0x7f33d8f672d0"
+	"MmBackward
+0x7f33d8f672d0" -> "TBackward
+0x7f33d8f670d0"
+	"TBackward
+0x7f33d8f670d0" -> "UnsqueezeBackward0
+0x7f33d8f67750"
+	"UnsqueezeBackward0
+0x7f33d8f67750" -> "SumBackward1
+0x7f33d8f677d0"
+	"SumBackward1
+0x7f33d8f677d0" -> "MulBackward0
+0x7f33d8f67790"
+	"MulBackward0
+0x7f33d8f67790" -> "ViewBackward
+0x7f33d8f67990"
+	"ViewBackward
+0x7f33d8f67990" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67790" -> "ViewBackward
+0x7f33d8f678d0"
+	"ViewBackward
+0x7f33d8f678d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f672d0" -> "ViewBackward
+0x7f33e2290b90"
+	"ViewBackward
+0x7f33e2290b90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67550" -> "MmBackward
+0x7f33d8f67650"
+	"MmBackward
+0x7f33d8f67650" -> "TBackward
+0x7f33d8f67710"
+	"TBackward
+0x7f33d8f67710" -> "UnsqueezeBackward0
+0x7f33d8f67d10"
+	"UnsqueezeBackward0
+0x7f33d8f67d10" -> "SumBackward1
+0x7f33d8f67450"
+	"SumBackward1
+0x7f33d8f67450" -> "MulBackward0
+0x7f33d8f67e10"
+	"MulBackward0
+0x7f33d8f67e10" -> "ViewBackward
+0x7f33d8f67cd0"
+	"ViewBackward
+0x7f33d8f67cd0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67e10" -> "ViewBackward
+0x7f33d8f67790"
+	"ViewBackward
+0x7f33d8f67790" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67650" -> "ViewBackward
+0x7f33d8f67390"
+	"ViewBackward
+0x7f33d8f67390" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290710" -> "SigmoidBackward
+0x7f33d8f67490"
+	"SigmoidBackward
+0x7f33d8f67490" -> "AddBackward0
+0x7f33d8f67510"
+	"AddBackward0
+0x7f33d8f67510" -> "AddBackward0
+0x7f33d8f676d0"
+	"AddBackward0
+0x7f33d8f676d0" -> "MmBackward
+0x7f33d8f670d0"
+	"MmBackward
+0x7f33d8f670d0" -> "FusedDropoutBackward
+0x7f33d8f67b10"
+	"FusedDropoutBackward
+0x7f33d8f67b10" -> "ViewBackward
+0x7f33d8f67ad0"
+	"ViewBackward
+0x7f33d8f67ad0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f670d0" -> "ViewBackward
+0x7f33e2290b90"
+	"ViewBackward
+0x7f33e2290b90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f676d0" -> "MmBackward
+0x7f33d8f67650"
+	"MmBackward
+0x7f33d8f67650" -> "FusedDropoutBackward
+0x7f33d8f67dd0"
+	"FusedDropoutBackward
+0x7f33d8f67dd0" -> "ViewBackward
+0x7f33d8f67d50"
+	"ViewBackward
+0x7f33d8f67d50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f67650" -> "ViewBackward
+0x7f33d8f67810"
+	"ViewBackward
+0x7f33d8f67810" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f67510" -> "MmBackward
+0x7f33d8f675d0"
+	"MmBackward
+0x7f33d8f675d0" -> "FusedDropoutBackward
+0x7f33d8f67f50"
+	"FusedDropoutBackward
+0x7f33d8f67f50" -> "ViewBackward
+0x7f33d8f67b10"
+	"ViewBackward
+0x7f33d8f67b10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f675d0" -> "UnsqueezeBackward0
+0x7f33d8f67350"
+	"UnsqueezeBackward0
+0x7f33d8f67350" -> "SumBackward1
+0x7f33d8f67810"
+	"SumBackward1
+0x7f33d8f67810" -> "MulBackward0
+0x7f33d8f67fd0"
+	"MulBackward0
+0x7f33d8f67fd0" -> "ViewBackward
+0x7f33d8f67d50"
+	"ViewBackward
+0x7f33d8f67d50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67fd0" -> "ViewBackward
+0x7f33d8f67450"
+	"ViewBackward
+0x7f33d8f67450" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290e90" -> "None
+None"
+	"AddBackward0
+0x7f33e2290950" -> "MulBackward0
+0x7f33e2290d50"
+	"MulBackward0
+0x7f33e2290d50" -> "SoftmaxBackward
+0x7f33e2290b10"
+	"SoftmaxBackward
+0x7f33e2290b10" -> "AddBackward0
+0x7f33e2290ed0"
+	"AddBackward0
+0x7f33e2290ed0" -> "MmBackward
+0x7f33d8f67090"
+	"MmBackward
+0x7f33d8f67090" -> "TBackward
+0x7f33d8f67890"
+	"TBackward
+0x7f33d8f67890" -> "UnsqueezeBackward0
+0x7f33d8f67610"
+	"UnsqueezeBackward0
+0x7f33d8f67610" -> "SumBackward1
+0x7f33d8f67510"
+	"SumBackward1
+0x7f33d8f67510" -> "MulBackward0
+0x7f33d8f675d0"
+	"MulBackward0
+0x7f33d8f675d0" -> "ViewBackward
+0x7f33d8f67710"
+	"ViewBackward
+0x7f33d8f67710" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f675d0" -> "ViewBackward
+0x7f33d8f67a50"
+	"ViewBackward
+0x7f33d8f67a50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67090" -> "DivBackward0
+0x7f33e2290e90"
+	"DivBackward0
+0x7f33e2290e90" -> "AddBackward0
+0x7f33d8f67150"
+	"AddBackward0
+0x7f33d8f67150" -> "ViewBackward
+0x7f33d8f67350"
+	"ViewBackward
+0x7f33d8f67350" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67150" -> "MulBackward0
+0x7f33d8f67610"
+	"MulBackward0
+0x7f33d8f67610" -> "SoftmaxBackward
+0x7f33d8f67910"
+	"SoftmaxBackward
+0x7f33d8f67910" -> "AddBackward0
+0x7f33d8f67710"
+	"AddBackward0
+0x7f33d8f67710" -> "MmBackward
+0x7f33d8f67810"
+	"MmBackward
+0x7f33d8f67810" -> "TBackward
+0x7f33d8f67f10"
+	"TBackward
+0x7f33d8f67f10" -> "UnsqueezeBackward0
+0x7f33d8f67dd0"
+	"UnsqueezeBackward0
+0x7f33d8f67dd0" -> "SumBackward1
+0x7f33d8f67a90"
+	"SumBackward1
+0x7f33d8f67a90" -> "MulBackward0
+0x7f33d8f67ad0"
+	"MulBackward0
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f771d0"
+	"ViewBackward
+0x7f33d8f771d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f77210"
+	"ViewBackward
+0x7f33d8f77210" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67810" -> "ViewBackward
+0x7f33d8f67350"
+	"ViewBackward
+0x7f33d8f67350" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67710" -> "MmBackward
+0x7f33d8f67650"
+	"MmBackward
+0x7f33d8f67650" -> "TBackward
+0x7f33d8f67c50"
+	"TBackward
+0x7f33d8f67c50" -> "UnsqueezeBackward0
+0x7f33d8f678d0"
+	"UnsqueezeBackward0
+0x7f33d8f678d0" -> "SumBackward1
+0x7f33d8f67e90"
+	"SumBackward1
+0x7f33d8f67e90" -> "MulBackward0
+0x7f33d8f770d0"
+	"MulBackward0
+0x7f33d8f770d0" -> "ViewBackward
+0x7f33d8f77450"
+	"ViewBackward
+0x7f33d8f77450" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f770d0" -> "ViewBackward
+0x7f33d8f77410"
+	"ViewBackward
+0x7f33d8f77410" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67650" -> "ViewBackward
+0x7f33d8f67e10"
+	"ViewBackward
+0x7f33d8f67e10" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f67610" -> "SigmoidBackward
+0x7f33d8f67b10"
+	"SigmoidBackward
+0x7f33d8f67b10" -> "AddBackward0
+0x7f33d8f67f50"
+	"AddBackward0
+0x7f33d8f67f50" -> "AddBackward0
+0x7f33d8f67ed0"
+	"AddBackward0
+0x7f33d8f67ed0" -> "MmBackward
+0x7f33d8f67bd0"
+	"MmBackward
+0x7f33d8f67bd0" -> "FusedDropoutBackward
+0x7f33d8f67f90"
+	"FusedDropoutBackward
+0x7f33d8f67f90" -> "ViewBackward
+0x7f33d8f67e90"
+	"ViewBackward
+0x7f33d8f67e90" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f67bd0" -> "ViewBackward
+0x7f33d8f67350"
+	"ViewBackward
+0x7f33d8f67350" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67ed0" -> "MmBackward
+0x7f33d8f67650"
+	"MmBackward
+0x7f33d8f67650" -> "FusedDropoutBackward
+0x7f33d8f67f10"
+	"FusedDropoutBackward
+0x7f33d8f67f10" -> "ViewBackward
+0x7f33d8f67ad0"
+	"ViewBackward
+0x7f33d8f67ad0" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f67650" -> "ViewBackward
+0x7f33d8f67f90"
+	"ViewBackward
+0x7f33d8f67f90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f67f50" -> "MmBackward
+0x7f33d8f67790"
+	"MmBackward
+0x7f33d8f67790" -> "FusedDropoutBackward
+0x7f33d8f67c50"
+	"FusedDropoutBackward
+0x7f33d8f67c50" -> "ViewBackward
+0x7f33d8f67450"
+	"ViewBackward
+0x7f33d8f67450" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f67790" -> "UnsqueezeBackward0
+0x7f33d8f67990"
+	"UnsqueezeBackward0
+0x7f33d8f67990" -> "SumBackward1
+0x7f33d8f67450"
+	"SumBackward1
+0x7f33d8f67450" -> "MulBackward0
+0x7f33d8f67f10"
+	"MulBackward0
+0x7f33d8f67f10" -> "ViewBackward
+0x7f33d8f77190"
+	"ViewBackward
+0x7f33d8f77190" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f67f10" -> "ViewBackward
+0x7f33d8f77090"
+	"ViewBackward
+0x7f33d8f77090" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290e90" -> "None
+None"
+	"AddBackward0
+0x7f33e2290ed0" -> "MmBackward
+0x7f33d8f671d0"
+	"MmBackward
+0x7f33d8f671d0" -> "TBackward
+0x7f33d8f67550"
+	"TBackward
+0x7f33d8f67550" -> "UnsqueezeBackward0
+0x7f33d8f67d10"
+	"UnsqueezeBackward0
+0x7f33d8f67d10" -> "SumBackward1
+0x7f33d8f67590"
+	"SumBackward1
+0x7f33d8f67590" -> "MulBackward0
+0x7f33d8f672d0"
+	"MulBackward0
+0x7f33d8f672d0" -> "ViewBackward
+0x7f33d8f676d0"
+	"ViewBackward
+0x7f33d8f676d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f672d0" -> "ViewBackward
+0x7f33d8f67350"
+	"ViewBackward
+0x7f33d8f67350" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f671d0" -> "ViewBackward
+0x7f33d8f67850"
+	"ViewBackward
+0x7f33d8f67850" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290d50" -> "SigmoidBackward
+0x7f33e2290fd0"
+	"SigmoidBackward
+0x7f33e2290fd0" -> "AddBackward0
+0x7f33e2290ed0"
+	"AddBackward0
+0x7f33e2290ed0" -> "AddBackward0
+0x7f33d8f67190"
+	"AddBackward0
+0x7f33d8f67190" -> "MmBackward
+0x7f33d8f67890"
+	"MmBackward
+0x7f33d8f67890" -> "FusedDropoutBackward
+0x7f33d8f67b10"
+	"FusedDropoutBackward
+0x7f33d8f67b10" -> "ViewBackward
+0x7f33d8f67a10"
+	"ViewBackward
+0x7f33d8f67a10" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f67890" -> "DivBackward0
+0x7f33e2290e90"
+	"DivBackward0
+0x7f33e2290e90" -> "AddBackward0
+0x7f33d8f67950"
+	"AddBackward0
+0x7f33d8f67950" -> "ViewBackward
+0x7f33d8f67cd0"
+	"ViewBackward
+0x7f33d8f67cd0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67950" -> "MulBackward0
+0x7f33d8f67a10"
+	"MulBackward0
+0x7f33d8f67a10" -> "SoftmaxBackward
+0x7f33d8f67ed0"
+	"SoftmaxBackward
+0x7f33d8f67ed0" -> "AddBackward0
+0x7f33d8f67f90"
+	"AddBackward0
+0x7f33d8f67f90" -> "MmBackward
+0x7f33d8f67350"
+	"MmBackward
+0x7f33d8f67350" -> "TBackward
+0x7f33d8f67e90"
+	"TBackward
+0x7f33d8f67e90" -> "UnsqueezeBackward0
+0x7f33d8f67f10"
+	"UnsqueezeBackward0
+0x7f33d8f67f10" -> "SumBackward1
+0x7f33d8f7e050"
+	"SumBackward1
+0x7f33d8f7e050" -> "MulBackward0
+0x7f33d8f7e1d0"
+	"MulBackward0
+0x7f33d8f7e1d0" -> "ViewBackward
+0x7f33d8f7e3d0"
+	"ViewBackward
+0x7f33d8f7e3d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f7e1d0" -> "ViewBackward
+0x7f33d8f7e410"
+	"ViewBackward
+0x7f33d8f7e410" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67350" -> "ViewBackward
+0x7f33d8f67cd0"
+	"ViewBackward
+0x7f33d8f67cd0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67f90" -> "MmBackward
+0x7f33d8f67510"
+	"MmBackward
+0x7f33d8f67510" -> "TBackward
+0x7f33d8f67e10"
+	"TBackward
+0x7f33d8f67e10" -> "UnsqueezeBackward0
+0x7f33d8f67ad0"
+	"UnsqueezeBackward0
+0x7f33d8f67ad0" -> "SumBackward1
+0x7f33d8f7e110"
+	"SumBackward1
+0x7f33d8f7e110" -> "MulBackward0
+0x7f33d8f7e190"
+	"MulBackward0
+0x7f33d8f7e190" -> "ViewBackward
+0x7f33d8f7e610"
+	"ViewBackward
+0x7f33d8f7e610" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f7e190" -> "ViewBackward
+0x7f33d8f7e1d0"
+	"ViewBackward
+0x7f33d8f7e1d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f67510" -> "ViewBackward
+0x7f33d8f67e90"
+	"ViewBackward
+0x7f33d8f67e90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f67a10" -> "SigmoidBackward
+0x7f33d8f676d0"
+	"SigmoidBackward
+0x7f33d8f676d0" -> "AddBackward0
+0x7f33d8f679d0"
+	"AddBackward0
+0x7f33d8f679d0" -> "AddBackward0
+0x7f33d8f67c50"
+	"AddBackward0
+0x7f33d8f67c50" -> "MmBackward
+0x7f33d8f678d0"
+	"MmBackward
+0x7f33d8f678d0" -> "FusedDropoutBackward
+0x7f33d8f67ad0"
+	"FusedDropoutBackward
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f7e090"
+	"ViewBackward
+0x7f33d8f7e090" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f678d0" -> "ViewBackward
+0x7f33d8f67cd0"
+	"ViewBackward
+0x7f33d8f67cd0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f67c50" -> "MmBackward
+0x7f33d8f67450"
+	"MmBackward
+0x7f33d8f67450" -> "FusedDropoutBackward
+0x7f33d8f67ad0"
+	"FusedDropoutBackward
+0x7f33d8f67ad0" -> "ViewBackward
+0x7f33d8f7e910"
+	"ViewBackward
+0x7f33d8f7e910" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f67450" -> "ViewBackward
+0x7f33d8f7e250"
+	"ViewBackward
+0x7f33d8f7e250" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f679d0" -> "MmBackward
+0x7f33d8f67650"
+	"MmBackward
+0x7f33d8f67650" -> "FusedDropoutBackward
+0x7f33d8f67450"
+	"FusedDropoutBackward
+0x7f33d8f67450" -> "ViewBackward
+0x7f33d8f67ad0"
+	"ViewBackward
+0x7f33d8f67ad0" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f67650" -> "UnsqueezeBackward0
+0x7f33d8f67e10"
+	"UnsqueezeBackward0
+0x7f33d8f67e10" -> "SumBackward1
+0x7f33d8f67ad0"
+	"SumBackward1
+0x7f33d8f67ad0" -> "MulBackward0
+0x7f33d8f7e210"
+	"MulBackward0
+0x7f33d8f7e210" -> "ViewBackward
+0x7f33d8f7e910"
+	"ViewBackward
+0x7f33d8f7e910" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f7e210" -> "ViewBackward
+0x7f33d8f7e110"
+	"ViewBackward
+0x7f33d8f7e110" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290e90" -> "None
+None"
+	"AddBackward0
+0x7f33d8f67190" -> "MmBackward
+0x7f33d8f671d0"
+	"MmBackward
+0x7f33d8f671d0" -> "FusedDropoutBackward
+0x7f33d8f67b90"
+	"FusedDropoutBackward
+0x7f33d8f67b90" -> "ViewBackward
+0x7f33d8f67f50"
+	"ViewBackward
+0x7f33d8f67f50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f671d0" -> "ViewBackward
+0x7f33d8f670d0"
+	"ViewBackward
+0x7f33d8f670d0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290ed0" -> "MmBackward
+0x7f33d8f67690"
+	"MmBackward
+0x7f33d8f67690" -> "FusedDropoutBackward
+0x7f33d8f67210"
+	"FusedDropoutBackward
+0x7f33d8f67210" -> "ViewBackward
+0x7f33d8f67b10"
+	"ViewBackward
+0x7f33d8f67b10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f67690" -> "UnsqueezeBackward0
+0x7f33d8f67490"
+	"UnsqueezeBackward0
+0x7f33d8f67490" -> "SumBackward1
+0x7f33d8f670d0"
+	"SumBackward1
+0x7f33d8f670d0" -> "MulBackward0
+0x7f33d8f677d0"
+	"MulBackward0
+0x7f33d8f677d0" -> "ViewBackward
+0x7f33d8f67f50"
+	"ViewBackward
+0x7f33d8f67f50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f677d0" -> "ViewBackward
+0x7f33d8f67a10"
+	"ViewBackward
+0x7f33d8f67a10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290650" -> "None
+None"
+	"AddBackward0
+0x7f33e22905d0" -> "MmBackward
+0x7f33e2290290"
+	"MmBackward
+0x7f33e2290290" -> "TBackward
+0x7f33e2290810"
+	"TBackward
+0x7f33e2290810" -> "UnsqueezeBackward0
+0x7f33e2290f90"
+	"UnsqueezeBackward0
+0x7f33e2290f90" -> "SumBackward1
+0x7f33e2290bd0"
+	"SumBackward1
+0x7f33e2290bd0" -> "MulBackward0
+0x7f33e2290990"
+	"MulBackward0
+0x7f33e2290990" -> "ViewBackward
+0x7f33e2290e90"
+	"ViewBackward
+0x7f33e2290e90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290990" -> "ViewBackward
+0x7f33e2290fd0"
+	"ViewBackward
+0x7f33e2290fd0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290290" -> "ViewBackward
+0x7f33e22907d0"
+	"ViewBackward
+0x7f33e22907d0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290150" -> "SigmoidBackward
+0x7f33e2290590"
+	"SigmoidBackward
+0x7f33e2290590" -> "AddBackward0
+0x7f33e2290750"
+	"AddBackward0
+0x7f33e2290750" -> "AddBackward0
+0x7f33e22902d0"
+	"AddBackward0
+0x7f33e22902d0" -> "MmBackward
+0x7f33e22908d0"
+	"MmBackward
+0x7f33e22908d0" -> "FusedDropoutBackward
+0x7f33e2290710"
+	"FusedDropoutBackward
+0x7f33e2290710" -> "ViewBackward
+0x7f33e2290990"
+	"ViewBackward
+0x7f33e2290990" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e22908d0" -> "DivBackward0
+0x7f33e2290650"
+	"DivBackward0
+0x7f33e2290650" -> "AddBackward0
+0x7f33e2290d50"
+	"AddBackward0
+0x7f33e2290d50" -> "DivBackward0
+0x7f33e2290f10"
+	"DivBackward0
+0x7f33e2290f10" -> "AddBackward0
+0x7f33e2290f90"
+	"AddBackward0
+0x7f33e2290f90" -> "ViewBackward
+0x7f33d8f800d0"
+	"ViewBackward
+0x7f33d8f800d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290f90" -> "MulBackward0
+0x7f33d8f80110"
+	"MulBackward0
+0x7f33d8f80110" -> "SoftmaxBackward
+0x7f33d8f80510"
+	"SoftmaxBackward
+0x7f33d8f80510" -> "AddBackward0
+0x7f33d8f80650"
+	"AddBackward0
+0x7f33d8f80650" -> "MmBackward
+0x7f33d8f80450"
+	"MmBackward
+0x7f33d8f80450" -> "TBackward
+0x7f33d8f80790"
+	"TBackward
+0x7f33d8f80790" -> "UnsqueezeBackward0
+0x7f33d8f80910"
+	"UnsqueezeBackward0
+0x7f33d8f80910" -> "SumBackward1
+0x7f33d8f80990"
+	"SumBackward1
+0x7f33d8f80990" -> "MulBackward0
+0x7f33d8f80b10"
+	"MulBackward0
+0x7f33d8f80b10" -> "ViewBackward
+0x7f33d8f80d10"
+	"ViewBackward
+0x7f33d8f80d10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80b10" -> "ViewBackward
+0x7f33d8f80d50"
+	"ViewBackward
+0x7f33d8f80d50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80450" -> "ViewBackward
+0x7f33d8f800d0"
+	"ViewBackward
+0x7f33d8f800d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80650" -> "MmBackward
+0x7f33d8f80490"
+	"MmBackward
+0x7f33d8f80490" -> "TBackward
+0x7f33d8f80a10"
+	"TBackward
+0x7f33d8f80a10" -> "UnsqueezeBackward0
+0x7f33d8f80e10"
+	"UnsqueezeBackward0
+0x7f33d8f80e10" -> "SumBackward1
+0x7f33d8f80ad0"
+	"SumBackward1
+0x7f33d8f80ad0" -> "MulBackward0
+0x7f33d8f80950"
+	"MulBackward0
+0x7f33d8f80950" -> "ViewBackward
+0x7f33d8f80f50"
+	"ViewBackward
+0x7f33d8f80f50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80950" -> "ViewBackward
+0x7f33d8f80b10"
+	"ViewBackward
+0x7f33d8f80b10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80490" -> "ViewBackward
+0x7f33d8f809d0"
+	"ViewBackward
+0x7f33d8f809d0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f80110" -> "SigmoidBackward
+0x7f33d8f804d0"
+	"SigmoidBackward
+0x7f33d8f804d0" -> "AddBackward0
+0x7f33d8f80610"
+	"AddBackward0
+0x7f33d8f80610" -> "AddBackward0
+0x7f33d8f80850"
+	"AddBackward0
+0x7f33d8f80850" -> "MmBackward
+0x7f33d8f80790"
+	"MmBackward
+0x7f33d8f80790" -> "FusedDropoutBackward
+0x7f33d8f80c50"
+	"FusedDropoutBackward
+0x7f33d8f80c50" -> "ViewBackward
+0x7f33d8f80f10"
+	"ViewBackward
+0x7f33d8f80f10" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f80790" -> "ViewBackward
+0x7f33d8f800d0"
+	"ViewBackward
+0x7f33d8f800d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80850" -> "MmBackward
+0x7f33d8f80490"
+	"MmBackward
+0x7f33d8f80490" -> "FusedDropoutBackward
+0x7f33d8f80c90"
+	"FusedDropoutBackward
+0x7f33d8f80c90" -> "ViewBackward
+0x7f33d8f80d10"
+	"ViewBackward
+0x7f33d8f80d10" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f80490" -> "ViewBackward
+0x7f33d8f80a90"
+	"ViewBackward
+0x7f33d8f80a90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f80610" -> "MmBackward
+0x7f33d8f80810"
+	"MmBackward
+0x7f33d8f80810" -> "FusedDropoutBackward
+0x7f33d8f80a50"
+	"FusedDropoutBackward
+0x7f33d8f80a50" -> "ViewBackward
+0x7f33d8f80c50"
+	"ViewBackward
+0x7f33d8f80c50" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f80810" -> "UnsqueezeBackward0
+0x7f33d8f807d0"
+	"UnsqueezeBackward0
+0x7f33d8f807d0" -> "SumBackward1
+0x7f33d8f80a90"
+	"SumBackward1
+0x7f33d8f80a90" -> "MulBackward0
+0x7f33d8f80fd0"
+	"MulBackward0
+0x7f33d8f80fd0" -> "ViewBackward
+0x7f33d8f80d10"
+	"ViewBackward
+0x7f33d8f80d10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80fd0" -> "ViewBackward
+0x7f33d8f80ad0"
+	"ViewBackward
+0x7f33d8f80ad0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290f10" -> "None
+None"
+	"AddBackward0
+0x7f33e2290d50" -> "MulBackward0
+0x7f33e2290990"
+	"MulBackward0
+0x7f33e2290990" -> "SoftmaxBackward
+0x7f33e2290c50"
+	"SoftmaxBackward
+0x7f33e2290c50" -> "AddBackward0
+0x7f33d8f80190"
+	"AddBackward0
+0x7f33d8f80190" -> "MmBackward
+0x7f33d8f802d0"
+	"MmBackward
+0x7f33d8f802d0" -> "TBackward
+0x7f33d8f806d0"
+	"TBackward
+0x7f33d8f806d0" -> "UnsqueezeBackward0
+0x7f33d8f80890"
+	"UnsqueezeBackward0
+0x7f33d8f80890" -> "SumBackward1
+0x7f33d8f80610"
+	"SumBackward1
+0x7f33d8f80610" -> "MulBackward0
+0x7f33d8f80810"
+	"MulBackward0
+0x7f33d8f80810" -> "ViewBackward
+0x7f33d8f80a10"
+	"ViewBackward
+0x7f33d8f80a10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80810" -> "ViewBackward
+0x7f33d8f80cd0"
+	"ViewBackward
+0x7f33d8f80cd0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f802d0" -> "DivBackward0
+0x7f33e2290f10"
+	"DivBackward0
+0x7f33e2290f10" -> "AddBackward0
+0x7f33d8f80750"
+	"AddBackward0
+0x7f33d8f80750" -> "ViewBackward
+0x7f33d8f807d0"
+	"ViewBackward
+0x7f33d8f807d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80750" -> "MulBackward0
+0x7f33d8f80890"
+	"MulBackward0
+0x7f33d8f80890" -> "SoftmaxBackward
+0x7f33d8f80b10"
+	"SoftmaxBackward
+0x7f33d8f80b10" -> "AddBackward0
+0x7f33d8f80a10"
+	"AddBackward0
+0x7f33d8f80a10" -> "MmBackward
+0x7f33d8f80a90"
+	"MmBackward
+0x7f33d8f80a90" -> "TBackward
+0x7f33d8f80e90"
+	"TBackward
+0x7f33d8f80e90" -> "UnsqueezeBackward0
+0x7f33d8f80c10"
+	"UnsqueezeBackward0
+0x7f33d8f80c10" -> "SumBackward1
+0x7f33d8f85050"
+	"SumBackward1
+0x7f33d8f85050" -> "MulBackward0
+0x7f33d8f851d0"
+	"MulBackward0
+0x7f33d8f851d0" -> "ViewBackward
+0x7f33d8f853d0"
+	"ViewBackward
+0x7f33d8f853d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f851d0" -> "ViewBackward
+0x7f33d8f85410"
+	"ViewBackward
+0x7f33d8f85410" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80a90" -> "ViewBackward
+0x7f33d8f807d0"
+	"ViewBackward
+0x7f33d8f807d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80a10" -> "MmBackward
+0x7f33d8f80490"
+	"MmBackward
+0x7f33d8f80490" -> "TBackward
+0x7f33d8f80b90"
+	"TBackward
+0x7f33d8f80b90" -> "UnsqueezeBackward0
+0x7f33d8f80f10"
+	"UnsqueezeBackward0
+0x7f33d8f80f10" -> "SumBackward1
+0x7f33d8f85110"
+	"SumBackward1
+0x7f33d8f85110" -> "MulBackward0
+0x7f33d8f85190"
+	"MulBackward0
+0x7f33d8f85190" -> "ViewBackward
+0x7f33d8f85610"
+	"ViewBackward
+0x7f33d8f85610" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f85190" -> "ViewBackward
+0x7f33d8f851d0"
+	"ViewBackward
+0x7f33d8f851d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80490" -> "ViewBackward
+0x7f33d8f80e90"
+	"ViewBackward
+0x7f33d8f80e90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f80890" -> "SigmoidBackward
+0x7f33d8f80c50"
+	"SigmoidBackward
+0x7f33d8f80c50" -> "AddBackward0
+0x7f33d8f80a50"
+	"AddBackward0
+0x7f33d8f80a50" -> "AddBackward0
+0x7f33d8f80c90"
+	"AddBackward0
+0x7f33d8f80c90" -> "MmBackward
+0x7f33d8f80ad0"
+	"MmBackward
+0x7f33d8f80ad0" -> "FusedDropoutBackward
+0x7f33d8f80f10"
+	"FusedDropoutBackward
+0x7f33d8f80f10" -> "ViewBackward
+0x7f33d8f85090"
+	"ViewBackward
+0x7f33d8f85090" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f80ad0" -> "ViewBackward
+0x7f33d8f807d0"
+	"ViewBackward
+0x7f33d8f807d0" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80c90" -> "MmBackward
+0x7f33d8f80d50"
+	"MmBackward
+0x7f33d8f80d50" -> "FusedDropoutBackward
+0x7f33d8f80f10"
+	"FusedDropoutBackward
+0x7f33d8f80f10" -> "ViewBackward
+0x7f33d8f85910"
+	"ViewBackward
+0x7f33d8f85910" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f80d50" -> "ViewBackward
+0x7f33d8f85250"
+	"ViewBackward
+0x7f33d8f85250" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f80a50" -> "MmBackward
+0x7f33d8f80910"
+	"MmBackward
+0x7f33d8f80910" -> "FusedDropoutBackward
+0x7f33d8f80d50"
+	"FusedDropoutBackward
+0x7f33d8f80d50" -> "ViewBackward
+0x7f33d8f80f10"
+	"ViewBackward
+0x7f33d8f80f10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f80910" -> "UnsqueezeBackward0
+0x7f33d8f80b90"
+	"UnsqueezeBackward0
+0x7f33d8f80b90" -> "SumBackward1
+0x7f33d8f80f10"
+	"SumBackward1
+0x7f33d8f80f10" -> "MulBackward0
+0x7f33d8f85210"
+	"MulBackward0
+0x7f33d8f85210" -> "ViewBackward
+0x7f33d8f85910"
+	"ViewBackward
+0x7f33d8f85910" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f85210" -> "ViewBackward
+0x7f33d8f85110"
+	"ViewBackward
+0x7f33d8f85110" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290f10" -> "None
+None"
+	"AddBackward0
+0x7f33d8f80190" -> "MmBackward
+0x7f33d8f80110"
+	"MmBackward
+0x7f33d8f80110" -> "TBackward
+0x7f33d8f80650"
+	"TBackward
+0x7f33d8f80650" -> "UnsqueezeBackward0
+0x7f33d8f80ed0"
+	"UnsqueezeBackward0
+0x7f33d8f80ed0" -> "SumBackward1
+0x7f33d8f808d0"
+	"SumBackward1
+0x7f33d8f808d0" -> "MulBackward0
+0x7f33d8f80450"
+	"MulBackward0
+0x7f33d8f80450" -> "ViewBackward
+0x7f33d8f80850"
+	"ViewBackward
+0x7f33d8f80850" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80450" -> "ViewBackward
+0x7f33d8f807d0"
+	"ViewBackward
+0x7f33d8f807d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80110" -> "ViewBackward
+0x7f33d8f80710"
+	"ViewBackward
+0x7f33d8f80710" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290990" -> "SigmoidBackward
+0x7f33e2290f90"
+	"SigmoidBackward
+0x7f33e2290f90" -> "AddBackward0
+0x7f33d8f80390"
+	"AddBackward0
+0x7f33d8f80390" -> "AddBackward0
+0x7f33d8f80590"
+	"AddBackward0
+0x7f33d8f80590" -> "MmBackward
+0x7f33d8f806d0"
+	"MmBackward
+0x7f33d8f806d0" -> "FusedDropoutBackward
+0x7f33d8f80c50"
+	"FusedDropoutBackward
+0x7f33d8f80c50" -> "ViewBackward
+0x7f33d8f80d10"
+	"ViewBackward
+0x7f33d8f80d10" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f806d0" -> "DivBackward0
+0x7f33e2290f10"
+	"DivBackward0
+0x7f33e2290f10" -> "AddBackward0
+0x7f33d8f80dd0"
+	"AddBackward0
+0x7f33d8f80dd0" -> "ViewBackward
+0x7f33d8f80f50"
+	"ViewBackward
+0x7f33d8f80f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80dd0" -> "MulBackward0
+0x7f33d8f80d10"
+	"MulBackward0
+0x7f33d8f80d10" -> "SoftmaxBackward
+0x7f33d8f80ad0"
+	"SoftmaxBackward
+0x7f33d8f80ad0" -> "AddBackward0
+0x7f33d8f80c10"
+	"AddBackward0
+0x7f33d8f80c10" -> "MmBackward
+0x7f33d8f807d0"
+	"MmBackward
+0x7f33d8f807d0" -> "TBackward
+0x7f33d8f80910"
+	"TBackward
+0x7f33d8f80910" -> "UnsqueezeBackward0
+0x7f33d8f87190"
+	"UnsqueezeBackward0
+0x7f33d8f87190" -> "SumBackward1
+0x7f33d8f87210"
+	"SumBackward1
+0x7f33d8f87210" -> "MulBackward0
+0x7f33d8f87390"
+	"MulBackward0
+0x7f33d8f87390" -> "ViewBackward
+0x7f33d8f87590"
+	"ViewBackward
+0x7f33d8f87590" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f87390" -> "ViewBackward
+0x7f33d8f875d0"
+	"ViewBackward
+0x7f33d8f875d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f807d0" -> "ViewBackward
+0x7f33d8f80f50"
+	"ViewBackward
+0x7f33d8f80f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80c10" -> "MmBackward
+0x7f33d8f80610"
+	"MmBackward
+0x7f33d8f80610" -> "TBackward
+0x7f33d8f80910"
+	"TBackward
+0x7f33d8f80910" -> "UnsqueezeBackward0
+0x7f33d8f87650"
+	"UnsqueezeBackward0
+0x7f33d8f87650" -> "SumBackward1
+0x7f33d8f87350"
+	"SumBackward1
+0x7f33d8f87350" -> "MulBackward0
+0x7f33d8f871d0"
+	"MulBackward0
+0x7f33d8f871d0" -> "ViewBackward
+0x7f33d8f877d0"
+	"ViewBackward
+0x7f33d8f877d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f871d0" -> "ViewBackward
+0x7f33d8f87390"
+	"ViewBackward
+0x7f33d8f87390" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f80610" -> "ViewBackward
+0x7f33d8f87290"
+	"ViewBackward
+0x7f33d8f87290" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f80d10" -> "SigmoidBackward
+0x7f33d8f80850"
+	"SigmoidBackward
+0x7f33d8f80850" -> "AddBackward0
+0x7f33d8f80c90"
+	"AddBackward0
+0x7f33d8f80c90" -> "AddBackward0
+0x7f33d8f80c10"
+	"AddBackward0
+0x7f33d8f80c10" -> "MmBackward
+0x7f33d8f80910"
+	"MmBackward
+0x7f33d8f80910" -> "FusedDropoutBackward
+0x7f33d8f876d0"
+	"FusedDropoutBackward
+0x7f33d8f876d0" -> "ViewBackward
+0x7f33d8f87610"
+	"ViewBackward
+0x7f33d8f87610" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f80910" -> "ViewBackward
+0x7f33d8f80f50"
+	"ViewBackward
+0x7f33d8f80f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f80c10" -> "MmBackward
+0x7f33d8f870d0"
+	"MmBackward
+0x7f33d8f870d0" -> "FusedDropoutBackward
+0x7f33d8f87510"
+	"FusedDropoutBackward
+0x7f33d8f87510" -> "ViewBackward
+0x7f33d8f87590"
+	"ViewBackward
+0x7f33d8f87590" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f870d0" -> "ViewBackward
+0x7f33d8f87690"
+	"ViewBackward
+0x7f33d8f87690" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f80c90" -> "MmBackward
+0x7f33d8f80d90"
+	"MmBackward
+0x7f33d8f80d90" -> "FusedDropoutBackward
+0x7f33d8f80910"
+	"FusedDropoutBackward
+0x7f33d8f80910" -> "ViewBackward
+0x7f33d8f87550"
+	"ViewBackward
+0x7f33d8f87550" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f80d90" -> "UnsqueezeBackward0
+0x7f33d8f872d0"
+	"UnsqueezeBackward0
+0x7f33d8f872d0" -> "SumBackward1
+0x7f33d8f87690"
+	"SumBackward1
+0x7f33d8f87690" -> "MulBackward0
+0x7f33d8f878d0"
+	"MulBackward0
+0x7f33d8f878d0" -> "ViewBackward
+0x7f33d8f87590"
+	"ViewBackward
+0x7f33d8f87590" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f878d0" -> "ViewBackward
+0x7f33d8f87350"
+	"ViewBackward
+0x7f33d8f87350" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290f10" -> "None
+None"
+	"AddBackward0
+0x7f33d8f80590" -> "MmBackward
+0x7f33d8f80110"
+	"MmBackward
+0x7f33d8f80110" -> "FusedDropoutBackward
+0x7f33d8f80e50"
+	"FusedDropoutBackward
+0x7f33d8f80e50" -> "ViewBackward
+0x7f33d8f80a50"
+	"ViewBackward
+0x7f33d8f80a50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f80110" -> "ViewBackward
+0x7f33d8f80790"
+	"ViewBackward
+0x7f33d8f80790" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f80390" -> "MmBackward
+0x7f33d8f80550"
+	"MmBackward
+0x7f33d8f80550" -> "FusedDropoutBackward
+0x7f33d8f805d0"
+	"FusedDropoutBackward
+0x7f33d8f805d0" -> "ViewBackward
+0x7f33d8f80c50"
+	"ViewBackward
+0x7f33d8f80c50" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f80550" -> "UnsqueezeBackward0
+0x7f33d8f804d0"
+	"UnsqueezeBackward0
+0x7f33d8f804d0" -> "SumBackward1
+0x7f33d8f80790"
+	"SumBackward1
+0x7f33d8f80790" -> "MulBackward0
+0x7f33d8f80990"
+	"MulBackward0
+0x7f33d8f80990" -> "ViewBackward
+0x7f33d8f80a50"
+	"ViewBackward
+0x7f33d8f80a50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f80990" -> "ViewBackward
+0x7f33d8f80d10"
+	"ViewBackward
+0x7f33d8f80d10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290650" -> "None
+None"
+	"AddBackward0
+0x7f33e22902d0" -> "MmBackward
+0x7f33e2290290"
+	"MmBackward
+0x7f33e2290290" -> "FusedDropoutBackward
+0x7f33e2290c90"
+	"FusedDropoutBackward
+0x7f33e2290c90" -> "ViewBackward
+0x7f33e2290c10"
+	"ViewBackward
+0x7f33e2290c10" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e2290290" -> "ViewBackward
+0x7f33e2290b50"
+	"ViewBackward
+0x7f33e2290b50" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290750" -> "MmBackward
+0x7f33e2290490"
+	"MmBackward
+0x7f33e2290490" -> "FusedDropoutBackward
+0x7f33e2290a90"
+	"FusedDropoutBackward
+0x7f33e2290a90" -> "ViewBackward
+0x7f33e2290710"
+	"ViewBackward
+0x7f33e2290710" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e2290490" -> "UnsqueezeBackward0
+0x7f33e2290890"
+	"UnsqueezeBackward0
+0x7f33e2290890" -> "SumBackward1
+0x7f33e2290b50"
+	"SumBackward1
+0x7f33e2290b50" -> "MulBackward0
+0x7f33e2290bd0"
+	"MulBackward0
+0x7f33e2290bd0" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290bd0" -> "ViewBackward
+0x7f33e2290c10"
+	"ViewBackward
+0x7f33e2290c10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2286810" -> "None
 None"
 	"MulBackward0
-0x7f4ae413bd10" -> "DivBackward0
-0x7f4ae413b7d0"
+0x7f33e2286d50" -> "DivBackward0
+0x7f33e2286810"
 	"DivBackward0
-0x7f4ae413b7d0" -> "AddBackward0
-0x7f4ae413bb90"
+0x7f33e2286810" -> "AddBackward0
+0x7f33e2286bd0"
 	"AddBackward0
-0x7f4ae413bb90" -> "ViewBackward
-0x7f4ae413bf10"
+0x7f33e2286bd0" -> "DivBackward0
+0x7f33e2286f50"
+	"DivBackward0
+0x7f33e2286f50" -> "AddBackward0
+0x7f33e2286d90"
+	"AddBackward0
+0x7f33e2286d90" -> "DivBackward0
+0x7f33e2290050"
+	"DivBackward0
+0x7f33e2290050" -> "AddBackward0
+0x7f33e2290150"
+	"AddBackward0
+0x7f33e2290150" -> "ViewBackward
+0x7f33e22906d0"
 	"ViewBackward
-0x7f4ae413bf10" -> "AccumulateGrad
+0x7f33e22906d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413bb90" -> "MulBackward0
-0x7f4ae413bcd0"
+0x7f33e2290150" -> "MulBackward0
+0x7f33e2290590"
 	"MulBackward0
-0x7f4ae413bcd0" -> "SoftmaxBackward
-0x7f4ae413b890"
+0x7f33e2290590" -> "SoftmaxBackward
+0x7f33e2290b90"
 	"SoftmaxBackward
-0x7f4ae413b890" -> "AddBackward0
-0x7f4ae413e1d0"
+0x7f33e2290b90" -> "AddBackward0
+0x7f33e2290810"
 	"AddBackward0
-0x7f4ae413e1d0" -> "MmBackward
-0x7f4ae413e3d0"
+0x7f33e2290810" -> "MmBackward
+0x7f33e2290490"
 	"MmBackward
-0x7f4ae413e3d0" -> "TBackward
-0x7f4ae413e550"
+0x7f33e2290490" -> "TBackward
+0x7f33e2290b50"
 	"TBackward
-0x7f4ae413e550" -> "UnsqueezeBackward0
-0x7f4ae413e7d0"
+0x7f33e2290b50" -> "UnsqueezeBackward0
+0x7f33e2290950"
 	"UnsqueezeBackward0
-0x7f4ae413e7d0" -> "SumBackward1
-0x7f4ae413e750"
+0x7f33e2290950" -> "SumBackward1
+0x7f33e2290710"
 	"SumBackward1
-0x7f4ae413e750" -> "MulBackward0
-0x7f4ae413e250"
+0x7f33e2290710" -> "MulBackward0
+0x7f33e2290e90"
 	"MulBackward0
-0x7f4ae413e250" -> "ViewBackward
-0x7f4ae413e950"
+0x7f33e2290e90" -> "ViewBackward
+0x7f33d8f8b1d0"
 	"ViewBackward
-0x7f4ae413e950" -> "AccumulateGrad
+0x7f33d8f8b1d0" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413e250" -> "ViewBackward
-0x7f4ae413ea50"
+0x7f33e2290e90" -> "ViewBackward
+0x7f33d8f8b210"
 	"ViewBackward
-0x7f4ae413ea50" -> "AccumulateGrad
+0x7f33d8f8b210" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"MmBackward
-0x7f4ae413e3d0" -> "ViewBackward
-0x7f4ae413bf10"
+0x7f33e2290490" -> "ViewBackward
+0x7f33e22906d0"
 	"ViewBackward
-0x7f4ae413bf10" -> "AccumulateGrad
+0x7f33e22906d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413e1d0" -> "MmBackward
-0x7f4ae413e190"
+0x7f33e2290810" -> "MmBackward
+0x7f33e2290a10"
 	"MmBackward
-0x7f4ae413e190" -> "TBackward
-0x7f4ae413e450"
+0x7f33e2290a10" -> "TBackward
+0x7f33e2290ed0"
 	"TBackward
-0x7f4ae413e450" -> "UnsqueezeBackward0
-0x7f4ae413ea90"
+0x7f33e2290ed0" -> "UnsqueezeBackward0
+0x7f33e2290b10"
 	"UnsqueezeBackward0
-0x7f4ae413ea90" -> "SumBackward1
-0x7f4ae413e850"
+0x7f33e2290b10" -> "SumBackward1
+0x7f33e2290d10"
 	"SumBackward1
-0x7f4ae413e850" -> "MulBackward0
-0x7f4ae413e290"
+0x7f33e2290d10" -> "MulBackward0
+0x7f33e2290d50"
 	"MulBackward0
-0x7f4ae413e290" -> "ViewBackward
-0x7f4ae413eed0"
+0x7f33e2290d50" -> "ViewBackward
+0x7f33d8f8b450"
 	"ViewBackward
-0x7f4ae413eed0" -> "AccumulateGrad
+0x7f33d8f8b450" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413e290" -> "ViewBackward
-0x7f4ae413e250"
+0x7f33e2290d50" -> "ViewBackward
+0x7f33d8f8b410"
 	"ViewBackward
-0x7f4ae413e250" -> "AccumulateGrad
+0x7f33d8f8b410" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"MmBackward
-0x7f4ae413e190" -> "ViewBackward
-0x7f4ae413e8d0"
+0x7f33e2290a10" -> "ViewBackward
+0x7f33e2290c10"
 	"ViewBackward
-0x7f4ae413e8d0" -> "AccumulateGrad
+0x7f33e2290c10" -> "AccumulateGrad
 (4, 16, 20)" [label=W]
 	"MulBackward0
-0x7f4ae413bcd0" -> "SigmoidBackward
-0x7f4ae413bd50"
+0x7f33e2290590" -> "SigmoidBackward
+0x7f33e2290690"
 	"SigmoidBackward
-0x7f4ae413bd50" -> "AddBackward0
-0x7f4ae413e410"
+0x7f33e2290690" -> "AddBackward0
+0x7f33e2290e10"
 	"AddBackward0
-0x7f4ae413e410" -> "AddBackward0
-0x7f4ae413e810"
+0x7f33e2290e10" -> "AddBackward0
+0x7f33e2290f10"
 	"AddBackward0
-0x7f4ae413e810" -> "MmBackward
-0x7f4ae413e550"
+0x7f33e2290f10" -> "MmBackward
+0x7f33e2290e90"
 	"MmBackward
-0x7f4ae413e550" -> "FusedDropoutBackward
-0x7f4ae413e890"
+0x7f33e2290e90" -> "FusedDropoutBackward
+0x7f33e2290c90"
 	"FusedDropoutBackward
-0x7f4ae413e890" -> "ViewBackward
-0x7f4ae413ee90"
+0x7f33e2290c90" -> "ViewBackward
+0x7f33e2290d10"
 	"ViewBackward
-0x7f4ae413ee90" -> "AccumulateGrad
+0x7f33e2290d10" -> "AccumulateGrad
 (8, 8, 64)" [label=X]
 	"MmBackward
-0x7f4ae413e550" -> "ViewBackward
-0x7f4ae413bf10"
+0x7f33e2290e90" -> "ViewBackward
+0x7f33e22906d0"
 	"ViewBackward
-0x7f4ae413bf10" -> "AccumulateGrad
+0x7f33e22906d0" -> "AccumulateGrad
 (2, 32, 20)" [label=H]
 	"AddBackward0
-0x7f4ae413e810" -> "MmBackward
-0x7f4ae413e190"
+0x7f33e2290f10" -> "MmBackward
+0x7f33e2290a10"
 	"MmBackward
-0x7f4ae413e190" -> "FusedDropoutBackward
-0x7f4ae413edd0"
+0x7f33e2290a10" -> "FusedDropoutBackward
+0x7f33e2290b50"
 	"FusedDropoutBackward
-0x7f4ae413edd0" -> "ViewBackward
-0x7f4ae413e950"
+0x7f33e2290b50" -> "ViewBackward
+0x7f33e2290710"
 	"ViewBackward
-0x7f4ae413e950" -> "AccumulateGrad
+0x7f33e2290710" -> "AccumulateGrad
 (16, 4, 64)" [label=Y]
 	"MmBackward
-0x7f4ae413e190" -> "ViewBackward
-0x7f4ae413ee50"
+0x7f33e2290a10" -> "ViewBackward
+0x7f33e2290c90"
 	"ViewBackward
-0x7f4ae413ee50" -> "AccumulateGrad
+0x7f33e2290c90" -> "AccumulateGrad
 (4, 16, 20)" [label=W]
 	"AddBackward0
-0x7f4ae413e410" -> "MmBackward
-0x7f4ae413e590"
+0x7f33e2290e10" -> "MmBackward
+0x7f33e2290fd0"
 	"MmBackward
-0x7f4ae413e590" -> "FusedDropoutBackward
-0x7f4ae413e6d0"
+0x7f33e2290fd0" -> "FusedDropoutBackward
+0x7f33e2290ed0"
 	"FusedDropoutBackward
-0x7f4ae413e6d0" -> "ViewBackward
-0x7f4ae413e890"
+0x7f33e2290ed0" -> "ViewBackward
+0x7f33e22907d0"
 	"ViewBackward
-0x7f4ae413e890" -> "AccumulateGrad
+0x7f33e22907d0" -> "AccumulateGrad
 (32, 2, 64)" [label=Z]
 	"MmBackward
-0x7f4ae413e590" -> "UnsqueezeBackward0
-0x7f4ae413e5d0"
+0x7f33e2290fd0" -> "UnsqueezeBackward0
+0x7f33e2290c50"
 	"UnsqueezeBackward0
-0x7f4ae413e5d0" -> "SumBackward1
-0x7f4ae413ee50"
+0x7f33e2290c50" -> "SumBackward1
+0x7f33e2290d50"
 	"SumBackward1
-0x7f4ae413ee50" -> "MulBackward0
-0x7f4ae413e910"
+0x7f33e2290d50" -> "MulBackward0
+0x7f33e2290b10"
 	"MulBackward0
-0x7f4ae413e910" -> "ViewBackward
-0x7f4ae413e950"
+0x7f33e2290b10" -> "ViewBackward
+0x7f33d8f8b290"
 	"ViewBackward
-0x7f4ae413e950" -> "AccumulateGrad
+0x7f33d8f8b290" -> "AccumulateGrad
 (2, 64, 5)" [label=F]
 	"MulBackward0
-0x7f4ae413e910" -> "ViewBackward
-0x7f4ae413e850"
+0x7f33e2290b10" -> "ViewBackward
+0x7f33d8f8b190"
 	"ViewBackward
-0x7f4ae413e850" -> "AccumulateGrad
+0x7f33d8f8b190" -> "AccumulateGrad
 (1, 64, 10)" [label=E]
 	"DivBackward0
-0x7f4ae413b7d0" -> "None
+0x7f33e2290050" -> "None
+None"
+	"AddBackward0
+0x7f33e2286d90" -> "MulBackward0
+0x7f33e2290910"
+	"MulBackward0
+0x7f33e2290910" -> "SoftmaxBackward
+0x7f33e22909d0"
+	"SoftmaxBackward
+0x7f33e22909d0" -> "AddBackward0
+0x7f33e2290ad0"
+	"AddBackward0
+0x7f33e2290ad0" -> "MmBackward
+0x7f33e2290750"
+	"MmBackward
+0x7f33e2290750" -> "TBackward
+0x7f33e2290a90"
+	"TBackward
+0x7f33e2290a90" -> "UnsqueezeBackward0
+0x7f33e2290f90"
+	"UnsqueezeBackward0
+0x7f33e2290f90" -> "SumBackward1
+0x7f33e2290e10"
+	"SumBackward1
+0x7f33e2290e10" -> "MulBackward0
+0x7f33e2290fd0"
+	"MulBackward0
+0x7f33e2290fd0" -> "ViewBackward
+0x7f33e2290a10"
+	"ViewBackward
+0x7f33e2290a10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290fd0" -> "ViewBackward
+0x7f33e2290ed0"
+	"ViewBackward
+0x7f33e2290ed0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290750" -> "DivBackward0
+0x7f33e2290050"
+	"DivBackward0
+0x7f33e2290050" -> "AddBackward0
+0x7f33e2290cd0"
+	"AddBackward0
+0x7f33e2290cd0" -> "ViewBackward
+0x7f33e2290e90"
+	"ViewBackward
+0x7f33e2290e90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290cd0" -> "MulBackward0
+0x7f33e2290f90"
+	"MulBackward0
+0x7f33e2290f90" -> "SoftmaxBackward
+0x7f33e2290a10"
+	"SoftmaxBackward
+0x7f33e2290a10" -> "AddBackward0
+0x7f33e2290c50"
+	"AddBackward0
+0x7f33e2290c50" -> "MmBackward
+0x7f33d8f8b710"
+	"MmBackward
+0x7f33d8f8b710" -> "TBackward
+0x7f33d8f8b6d0"
+	"TBackward
+0x7f33d8f8b6d0" -> "UnsqueezeBackward0
+0x7f33d8f8b350"
+	"UnsqueezeBackward0
+0x7f33d8f8b350" -> "SumBackward1
+0x7f33d8f8b550"
+	"SumBackward1
+0x7f33d8f8b550" -> "MulBackward0
+0x7f33d8f8b150"
+	"MulBackward0
+0x7f33d8f8b150" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b150" -> "ViewBackward
+0x7f33d8f8b890"
+	"ViewBackward
+0x7f33d8f8b890" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b710" -> "ViewBackward
+0x7f33e2290e90"
+	"ViewBackward
+0x7f33e2290e90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290c50" -> "MmBackward
+0x7f33d8f8b110"
+	"MmBackward
+0x7f33d8f8b110" -> "TBackward
+0x7f33d8f8b750"
+	"TBackward
+0x7f33d8f8b750" -> "UnsqueezeBackward0
+0x7f33d8f8b950"
+	"UnsqueezeBackward0
+0x7f33d8f8b950" -> "SumBackward1
+0x7f33d8f8b3d0"
+	"SumBackward1
+0x7f33d8f8b3d0" -> "MulBackward0
+0x7f33d8f8b450"
+	"MulBackward0
+0x7f33d8f8b450" -> "ViewBackward
+0x7f33d8f8ba90"
+	"ViewBackward
+0x7f33d8f8ba90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b450" -> "ViewBackward
+0x7f33d8f8b150"
+	"ViewBackward
+0x7f33d8f8b150" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b110" -> "ViewBackward
+0x7f33d8f8b490"
+	"ViewBackward
+0x7f33d8f8b490" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290f90" -> "SigmoidBackward
+0x7f33e2290e10"
+	"SigmoidBackward
+0x7f33e2290e10" -> "AddBackward0
+0x7f33e2290c50"
+	"AddBackward0
+0x7f33e2290c50" -> "AddBackward0
+0x7f33d8f8b1d0"
+	"AddBackward0
+0x7f33d8f8b1d0" -> "MmBackward
+0x7f33d8f8b110"
+	"MmBackward
+0x7f33d8f8b110" -> "FusedDropoutBackward
+0x7f33d8f8b610"
+	"FusedDropoutBackward
+0x7f33d8f8b610" -> "ViewBackward
+0x7f33d8f8b8d0"
+	"ViewBackward
+0x7f33d8f8b8d0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b110" -> "ViewBackward
+0x7f33e2290e90"
+	"ViewBackward
+0x7f33e2290e90" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b1d0" -> "MmBackward
+0x7f33d8f8b6d0"
+	"MmBackward
+0x7f33d8f8b6d0" -> "FusedDropoutBackward
+0x7f33d8f8b650"
+	"FusedDropoutBackward
+0x7f33d8f8b650" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b6d0" -> "ViewBackward
+0x7f33d8f8b410"
+	"ViewBackward
+0x7f33d8f8b410" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290c50" -> "MmBackward
+0x7f33d8f8b2d0"
+	"MmBackward
+0x7f33d8f8b2d0" -> "FusedDropoutBackward
+0x7f33d8f8b790"
+	"FusedDropoutBackward
+0x7f33d8f8b790" -> "ViewBackward
+0x7f33d8f8b610"
+	"ViewBackward
+0x7f33d8f8b610" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b2d0" -> "UnsqueezeBackward0
+0x7f33d8f8b190"
+	"UnsqueezeBackward0
+0x7f33d8f8b190" -> "SumBackward1
+0x7f33d8f8b410"
+	"SumBackward1
+0x7f33d8f8b410" -> "MulBackward0
+0x7f33d8f8bb90"
+	"MulBackward0
+0x7f33d8f8bb90" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bb90" -> "ViewBackward
+0x7f33d8f8b3d0"
+	"ViewBackward
+0x7f33d8f8b3d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290050" -> "None
+None"
+	"AddBackward0
+0x7f33e2290ad0" -> "MmBackward
+0x7f33e2290590"
+	"MmBackward
+0x7f33e2290590" -> "TBackward
+0x7f33e2290810"
+	"TBackward
+0x7f33e2290810" -> "UnsqueezeBackward0
+0x7f33e22907d0"
+	"UnsqueezeBackward0
+0x7f33e22907d0" -> "SumBackward1
+0x7f33e2290bd0"
+	"SumBackward1
+0x7f33e2290bd0" -> "MulBackward0
+0x7f33e2290490"
+	"MulBackward0
+0x7f33e2290490" -> "ViewBackward
+0x7f33e2290e10"
+	"ViewBackward
+0x7f33e2290e10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290490" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290590" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290910" -> "SigmoidBackward
+0x7f33e2290250"
+	"SigmoidBackward
+0x7f33e2290250" -> "AddBackward0
+0x7f33e2290790"
+	"AddBackward0
+0x7f33e2290790" -> "AddBackward0
+0x7f33e2290290"
+	"AddBackward0
+0x7f33e2290290" -> "MmBackward
+0x7f33e2290a90"
+	"MmBackward
+0x7f33e2290a90" -> "FusedDropoutBackward
+0x7f33e2290c50"
+	"FusedDropoutBackward
+0x7f33e2290c50" -> "ViewBackward
+0x7f33e2290490"
+	"ViewBackward
+0x7f33e2290490" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e2290a90" -> "DivBackward0
+0x7f33e2290050"
+	"DivBackward0
+0x7f33e2290050" -> "AddBackward0
+0x7f33e2290b10"
+	"AddBackward0
+0x7f33e2290b10" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290b10" -> "MulBackward0
+0x7f33e2290490"
+	"MulBackward0
+0x7f33e2290490" -> "SoftmaxBackward
+0x7f33e2290e90"
+	"SoftmaxBackward
+0x7f33e2290e90" -> "AddBackward0
+0x7f33d8f8b090"
+	"AddBackward0
+0x7f33d8f8b090" -> "MmBackward
+0x7f33d8f8b310"
+	"MmBackward
+0x7f33d8f8b310" -> "TBackward
+0x7f33d8f8b110"
+	"TBackward
+0x7f33d8f8b110" -> "UnsqueezeBackward0
+0x7f33d8f8b950"
+	"UnsqueezeBackward0
+0x7f33d8f8b950" -> "SumBackward1
+0x7f33d8f8b490"
+	"SumBackward1
+0x7f33d8f8b490" -> "MulBackward0
+0x7f33d8f8b9d0"
+	"MulBackward0
+0x7f33d8f8b9d0" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b9d0" -> "ViewBackward
+0x7f33d8f8bc50"
+	"ViewBackward
+0x7f33d8f8bc50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b310" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b090" -> "MmBackward
+0x7f33d8f8b050"
+	"MmBackward
+0x7f33d8f8b050" -> "TBackward
+0x7f33d8f8bd50"
+	"TBackward
+0x7f33d8f8bd50" -> "UnsqueezeBackward0
+0x7f33d8f8ba90"
+	"UnsqueezeBackward0
+0x7f33d8f8ba90" -> "SumBackward1
+0x7f33d8f8b590"
+	"SumBackward1
+0x7f33d8f8b590" -> "MulBackward0
+0x7f33d8f8b410"
+	"MulBackward0
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8bd90"
+	"ViewBackward
+0x7f33d8f8bd90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8b9d0"
+	"ViewBackward
+0x7f33d8f8b9d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b050" -> "ViewBackward
+0x7f33d8f8b350"
+	"ViewBackward
+0x7f33d8f8b350" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290490" -> "SigmoidBackward
+0x7f33e2290ed0"
+	"SigmoidBackward
+0x7f33e2290ed0" -> "AddBackward0
+0x7f33d8f8b510"
+	"AddBackward0
+0x7f33d8f8b510" -> "AddBackward0
+0x7f33d8f8b810"
+	"AddBackward0
+0x7f33d8f8b810" -> "MmBackward
+0x7f33d8f8b110"
+	"MmBackward
+0x7f33d8f8b110" -> "FusedDropoutBackward
+0x7f33d8f8bb10"
+	"FusedDropoutBackward
+0x7f33d8f8bb10" -> "ViewBackward
+0x7f33d8f8ba10"
+	"ViewBackward
+0x7f33d8f8ba10" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b110" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b810" -> "MmBackward
+0x7f33d8f8b050"
+	"MmBackward
+0x7f33d8f8b050" -> "FusedDropoutBackward
+0x7f33d8f8b7d0"
+	"FusedDropoutBackward
+0x7f33d8f8b7d0" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b050" -> "ViewBackward
+0x7f33d8f8bb90"
+	"ViewBackward
+0x7f33d8f8bb90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8b510" -> "MmBackward
+0x7f33d8f8b750"
+	"MmBackward
+0x7f33d8f8b750" -> "FusedDropoutBackward
+0x7f33d8f8b550"
+	"FusedDropoutBackward
+0x7f33d8f8b550" -> "ViewBackward
+0x7f33d8f8bb10"
+	"ViewBackward
+0x7f33d8f8bb10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b750" -> "UnsqueezeBackward0
+0x7f33d8f8b910"
+	"UnsqueezeBackward0
+0x7f33d8f8b910" -> "SumBackward1
+0x7f33d8f8bb90"
+	"SumBackward1
+0x7f33d8f8bb90" -> "MulBackward0
+0x7f33d8f8be50"
+	"MulBackward0
+0x7f33d8f8be50" -> "ViewBackward
+0x7f33d8f8b850"
+	"ViewBackward
+0x7f33d8f8b850" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8be50" -> "ViewBackward
+0x7f33d8f8b590"
+	"ViewBackward
+0x7f33d8f8b590" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290050" -> "None
+None"
+	"AddBackward0
+0x7f33e2290290" -> "MmBackward
+0x7f33e2290590"
+	"MmBackward
+0x7f33e2290590" -> "FusedDropoutBackward
+0x7f33e2290c90"
+	"FusedDropoutBackward
+0x7f33e2290c90" -> "ViewBackward
+0x7f33e2290fd0"
+	"ViewBackward
+0x7f33e2290fd0" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e2290590" -> "ViewBackward
+0x7f33e2290d10"
+	"ViewBackward
+0x7f33e2290d10" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290790" -> "MmBackward
+0x7f33e22902d0"
+	"MmBackward
+0x7f33e22902d0" -> "FusedDropoutBackward
+0x7f33e2290890"
+	"FusedDropoutBackward
+0x7f33e2290890" -> "ViewBackward
+0x7f33e2290c50"
+	"ViewBackward
+0x7f33e2290c50" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e22902d0" -> "UnsqueezeBackward0
+0x7f33e2290690"
+	"UnsqueezeBackward0
+0x7f33e2290690" -> "SumBackward1
+0x7f33e2290d10"
+	"SumBackward1
+0x7f33e2290d10" -> "MulBackward0
+0x7f33e2290c10"
+	"MulBackward0
+0x7f33e2290c10" -> "ViewBackward
+0x7f33e2290bd0"
+	"ViewBackward
+0x7f33e2290bd0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290c10" -> "ViewBackward
+0x7f33e2290b10"
+	"ViewBackward
+0x7f33e2290b10" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2286f50" -> "None
+None"
+	"AddBackward0
+0x7f33e2286bd0" -> "MulBackward0
+0x7f33e2286d10"
+	"MulBackward0
+0x7f33e2286d10" -> "SoftmaxBackward
+0x7f33e2286f10"
+	"SoftmaxBackward
+0x7f33e2286f10" -> "AddBackward0
+0x7f33e2290210"
+	"AddBackward0
+0x7f33e2290210" -> "MmBackward
+0x7f33e22905d0"
+	"MmBackward
+0x7f33e22905d0" -> "TBackward
+0x7f33e2290350"
+	"TBackward
+0x7f33e2290350" -> "UnsqueezeBackward0
+0x7f33e2290990"
+	"UnsqueezeBackward0
+0x7f33e2290990" -> "SumBackward1
+0x7f33e2290790"
+	"SumBackward1
+0x7f33e2290790" -> "MulBackward0
+0x7f33e22902d0"
+	"MulBackward0
+0x7f33e22902d0" -> "ViewBackward
+0x7f33e2290810"
+	"ViewBackward
+0x7f33e2290810" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e22902d0" -> "ViewBackward
+0x7f33e2290490"
+	"ViewBackward
+0x7f33e2290490" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e22905d0" -> "DivBackward0
+0x7f33e2286f50"
+	"DivBackward0
+0x7f33e2286f50" -> "AddBackward0
+0x7f33e22904d0"
+	"AddBackward0
+0x7f33e22904d0" -> "DivBackward0
+0x7f33e2290690"
+	"DivBackward0
+0x7f33e2290690" -> "AddBackward0
+0x7f33e2290790"
+	"AddBackward0
+0x7f33e2290790" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290790" -> "MulBackward0
+0x7f33e2290d10"
+	"MulBackward0
+0x7f33e2290d10" -> "SoftmaxBackward
+0x7f33e2290e10"
+	"SoftmaxBackward
+0x7f33e2290e10" -> "AddBackward0
+0x7f33e2290950"
+	"AddBackward0
+0x7f33e2290950" -> "MmBackward
+0x7f33d8f8b1d0"
+	"MmBackward
+0x7f33d8f8b1d0" -> "TBackward
+0x7f33d8f8b250"
+	"TBackward
+0x7f33d8f8b250" -> "UnsqueezeBackward0
+0x7f33d8f8b110"
+	"UnsqueezeBackward0
+0x7f33d8f8b110" -> "SumBackward1
+0x7f33d8f8b750"
+	"SumBackward1
+0x7f33d8f8b750" -> "MulBackward0
+0x7f33d8f8b910"
+	"MulBackward0
+0x7f33d8f8b910" -> "ViewBackward
+0x7f33d8f8b350"
+	"ViewBackward
+0x7f33d8f8b350" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b910" -> "ViewBackward
+0x7f33d8f8b950"
+	"ViewBackward
+0x7f33d8f8b950" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b1d0" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290950" -> "MmBackward
+0x7f33d8f8b190"
+	"MmBackward
+0x7f33d8f8b190" -> "TBackward
+0x7f33d8f8b390"
+	"TBackward
+0x7f33d8f8b390" -> "UnsqueezeBackward0
+0x7f33d8f8be50"
+	"UnsqueezeBackward0
+0x7f33d8f8be50" -> "SumBackward1
+0x7f33d8f8b050"
+	"SumBackward1
+0x7f33d8f8b050" -> "MulBackward0
+0x7f33d8f8bbd0"
+	"MulBackward0
+0x7f33d8f8bbd0" -> "ViewBackward
+0x7f33d8f8b7d0"
+	"ViewBackward
+0x7f33d8f8b7d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bbd0" -> "ViewBackward
+0x7f33d8f8b910"
+	"ViewBackward
+0x7f33d8f8b910" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8b310"
+	"ViewBackward
+0x7f33d8f8b310" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290d10" -> "SigmoidBackward
+0x7f33e2290cd0"
+	"SigmoidBackward
+0x7f33e2290cd0" -> "AddBackward0
+0x7f33e2290950"
+	"AddBackward0
+0x7f33e2290950" -> "AddBackward0
+0x7f33d8f8b990"
+	"AddBackward0
+0x7f33d8f8b990" -> "MmBackward
+0x7f33d8f8b250"
+	"MmBackward
+0x7f33d8f8b250" -> "FusedDropoutBackward
+0x7f33d8f8b610"
+	"FusedDropoutBackward
+0x7f33d8f8b610" -> "ViewBackward
+0x7f33d8f8bcd0"
+	"ViewBackward
+0x7f33d8f8bcd0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b250" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b990" -> "MmBackward
+0x7f33d8f8b190"
+	"MmBackward
+0x7f33d8f8b190" -> "FusedDropoutBackward
+0x7f33d8f8ba90"
+	"FusedDropoutBackward
+0x7f33d8f8ba90" -> "ViewBackward
+0x7f33d8f8b350"
+	"ViewBackward
+0x7f33d8f8b350" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8b810"
+	"ViewBackward
+0x7f33d8f8b810" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290950" -> "MmBackward
+0x7f33d8f8b4d0"
+	"MmBackward
+0x7f33d8f8b4d0" -> "FusedDropoutBackward
+0x7f33d8f8ba50"
+	"FusedDropoutBackward
+0x7f33d8f8ba50" -> "ViewBackward
+0x7f33d8f8b610"
+	"ViewBackward
+0x7f33d8f8b610" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b4d0" -> "UnsqueezeBackward0
+0x7f33d8f8b290"
+	"UnsqueezeBackward0
+0x7f33d8f8b290" -> "SumBackward1
+0x7f33d8f8b810"
+	"SumBackward1
+0x7f33d8f8b810" -> "MulBackward0
+0x7f33d8f8b9d0"
+	"MulBackward0
+0x7f33d8f8b9d0" -> "ViewBackward
+0x7f33d8f8b350"
+	"ViewBackward
+0x7f33d8f8b350" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b9d0" -> "ViewBackward
+0x7f33d8f8b050"
+	"ViewBackward
+0x7f33d8f8b050" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290690" -> "None
+None"
+	"AddBackward0
+0x7f33e22904d0" -> "MulBackward0
+0x7f33e2290990"
+	"MulBackward0
+0x7f33e2290990" -> "SoftmaxBackward
+0x7f33e2290b10"
+	"SoftmaxBackward
+0x7f33e2290b10" -> "AddBackward0
+0x7f33e22907d0"
+	"AddBackward0
+0x7f33e22907d0" -> "MmBackward
+0x7f33e2290fd0"
+	"MmBackward
+0x7f33e2290fd0" -> "TBackward
+0x7f33e2290e10"
+	"TBackward
+0x7f33e2290e10" -> "UnsqueezeBackward0
+0x7f33d8f8bad0"
+	"UnsqueezeBackward0
+0x7f33d8f8bad0" -> "SumBackward1
+0x7f33d8f8b090"
+	"SumBackward1
+0x7f33d8f8b090" -> "MulBackward0
+0x7f33d8f8b4d0"
+	"MulBackward0
+0x7f33d8f8b4d0" -> "ViewBackward
+0x7f33d8f8b390"
+	"ViewBackward
+0x7f33d8f8b390" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b4d0" -> "ViewBackward
+0x7f33d8f8bb90"
+	"ViewBackward
+0x7f33d8f8bb90" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290fd0" -> "DivBackward0
+0x7f33e2290690"
+	"DivBackward0
+0x7f33e2290690" -> "AddBackward0
+0x7f33d8f8b690"
+	"AddBackward0
+0x7f33d8f8b690" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b690" -> "MulBackward0
+0x7f33d8f8bad0"
+	"MulBackward0
+0x7f33d8f8bad0" -> "SoftmaxBackward
+0x7f33d8f8b410"
+	"SoftmaxBackward
+0x7f33d8f8b410" -> "AddBackward0
+0x7f33d8f8b390"
+	"AddBackward0
+0x7f33d8f8b390" -> "MmBackward
+0x7f33d8f8b810"
+	"MmBackward
+0x7f33d8f8b810" -> "TBackward
+0x7f33d8f8b910"
+	"TBackward
+0x7f33d8f8b910" -> "UnsqueezeBackward0
+0x7f33d8f8ba90"
+	"UnsqueezeBackward0
+0x7f33d8f8ba90" -> "SumBackward1
+0x7f33d8f8b850"
+	"SumBackward1
+0x7f33d8f8b850" -> "MulBackward0
+0x7f33d8f8bcd0"
+	"MulBackward0
+0x7f33d8f8bcd0" -> "ViewBackward
+0x7f33d8f8b890"
+	"ViewBackward
+0x7f33d8f8b890" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bcd0" -> "ViewBackward
+0x7f33d8f8bc50"
+	"ViewBackward
+0x7f33d8f8bc50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b810" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b390" -> "MmBackward
+0x7f33d8f8b190"
+	"MmBackward
+0x7f33d8f8b190" -> "TBackward
+0x7f33d8f8bfd0"
+	"TBackward
+0x7f33d8f8bfd0" -> "UnsqueezeBackward0
+0x7f33d8f8bdd0"
+	"UnsqueezeBackward0
+0x7f33d8f8bdd0" -> "SumBackward1
+0x7f33d8f8b3d0"
+	"SumBackward1
+0x7f33d8f8b3d0" -> "MulBackward0
+0x7f33d8f8b7d0"
+	"MulBackward0
+0x7f33d8f8b7d0" -> "ViewBackward
+0x7f33d8f8bf10"
+	"ViewBackward
+0x7f33d8f8bf10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b7d0" -> "ViewBackward
+0x7f33d8f8bc50"
+	"ViewBackward
+0x7f33d8f8bc50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8bbd0"
+	"ViewBackward
+0x7f33d8f8bbd0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f8bad0" -> "SigmoidBackward
+0x7f33d8f8b610"
+	"SigmoidBackward
+0x7f33d8f8b610" -> "AddBackward0
+0x7f33d8f8ba50"
+	"AddBackward0
+0x7f33d8f8ba50" -> "AddBackward0
+0x7f33d8f8bb10"
+	"AddBackward0
+0x7f33d8f8bb10" -> "MmBackward
+0x7f33d8f8b910"
+	"MmBackward
+0x7f33d8f8b910" -> "FusedDropoutBackward
+0x7f33d8f8b890"
+	"FusedDropoutBackward
+0x7f33d8f8b890" -> "ViewBackward
+0x7f33d8f8b950"
+	"ViewBackward
+0x7f33d8f8b950" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b910" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8bb10" -> "MmBackward
+0x7f33d8f8b190"
+	"MmBackward
+0x7f33d8f8b190" -> "FusedDropoutBackward
+0x7f33d8f8bd90"
+	"FusedDropoutBackward
+0x7f33d8f8bd90" -> "ViewBackward
+0x7f33d8f8bdd0"
+	"ViewBackward
+0x7f33d8f8bdd0" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8bed0"
+	"ViewBackward
+0x7f33d8f8bed0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8ba50" -> "MmBackward
+0x7f33d8f8b210"
+	"MmBackward
+0x7f33d8f8b210" -> "FusedDropoutBackward
+0x7f33d8f8bf50"
+	"FusedDropoutBackward
+0x7f33d8f8bf50" -> "ViewBackward
+0x7f33d8f8b890"
+	"ViewBackward
+0x7f33d8f8b890" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b210" -> "UnsqueezeBackward0
+0x7f33d8f8b050"
+	"UnsqueezeBackward0
+0x7f33d8f8b050" -> "SumBackward1
+0x7f33d8f8bed0"
+	"SumBackward1
+0x7f33d8f8bed0" -> "MulBackward0
+0x7f33d8f8bf10"
+	"MulBackward0
+0x7f33d8f8bf10" -> "ViewBackward
+0x7f33d8f8bc50"
+	"ViewBackward
+0x7f33d8f8bc50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bf10" -> "ViewBackward
+0x7f33d8f8b7d0"
+	"ViewBackward
+0x7f33d8f8b7d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290690" -> "None
+None"
+	"AddBackward0
+0x7f33e22907d0" -> "MmBackward
+0x7f33e2290c50"
+	"MmBackward
+0x7f33e2290c50" -> "TBackward
+0x7f33e2290950"
+	"TBackward
+0x7f33e2290950" -> "UnsqueezeBackward0
+0x7f33d8f8b710"
+	"UnsqueezeBackward0
+0x7f33d8f8b710" -> "SumBackward1
+0x7f33d8f8b6d0"
+	"SumBackward1
+0x7f33d8f8b6d0" -> "MulBackward0
+0x7f33d8f8b1d0"
+	"MulBackward0
+0x7f33d8f8b1d0" -> "ViewBackward
+0x7f33d8f8b990"
+	"ViewBackward
+0x7f33d8f8b990" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b1d0" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290c50" -> "ViewBackward
+0x7f33e2290e10"
+	"ViewBackward
+0x7f33e2290e10" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290990" -> "SigmoidBackward
+0x7f33e2290d50"
+	"SigmoidBackward
+0x7f33e2290d50" -> "AddBackward0
+0x7f33e2290f50"
+	"AddBackward0
+0x7f33e2290f50" -> "AddBackward0
+0x7f33e2290b50"
+	"AddBackward0
+0x7f33e2290b50" -> "MmBackward
+0x7f33e2290fd0"
+	"MmBackward
+0x7f33e2290fd0" -> "FusedDropoutBackward
+0x7f33d8f8b790"
+	"FusedDropoutBackward
+0x7f33d8f8b790" -> "ViewBackward
+0x7f33d8f8b550"
+	"ViewBackward
+0x7f33d8f8b550" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e2290fd0" -> "DivBackward0
+0x7f33e2290690"
+	"DivBackward0
+0x7f33e2290690" -> "AddBackward0
+0x7f33d8f8b490"
+	"AddBackward0
+0x7f33d8f8b490" -> "ViewBackward
+0x7f33d8f8b450"
+	"ViewBackward
+0x7f33d8f8b450" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b490" -> "MulBackward0
+0x7f33d8f8b550"
+	"MulBackward0
+0x7f33d8f8b550" -> "SoftmaxBackward
+0x7f33d8f8bb10"
+	"SoftmaxBackward
+0x7f33d8f8bb10" -> "AddBackward0
+0x7f33d8f8b3d0"
+	"AddBackward0
+0x7f33d8f8b3d0" -> "MmBackward
+0x7f33d8f8b290"
+	"MmBackward
+0x7f33d8f8b290" -> "TBackward
+0x7f33d8f8b910"
+	"TBackward
+0x7f33d8f8b910" -> "UnsqueezeBackward0
+0x7f33d8f8bc10"
+	"UnsqueezeBackward0
+0x7f33d8f8bc10" -> "SumBackward1
+0x7f33d8f8bbd0"
+	"SumBackward1
+0x7f33d8f8bbd0" -> "MulBackward0
+0x7f33d8f8b890"
+	"MulBackward0
+0x7f33d8f8b890" -> "ViewBackward
+0x7f33d8f9f0d0"
+	"ViewBackward
+0x7f33d8f9f0d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b890" -> "ViewBackward
+0x7f33d8f9f110"
+	"ViewBackward
+0x7f33d8f9f110" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b290" -> "ViewBackward
+0x7f33d8f8b450"
+	"ViewBackward
+0x7f33d8f8b450" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b3d0" -> "MmBackward
+0x7f33d8f8b090"
+	"MmBackward
+0x7f33d8f8b090" -> "TBackward
+0x7f33d8f8b850"
+	"TBackward
+0x7f33d8f8b850" -> "UnsqueezeBackward0
+0x7f33d8f8bd10"
+	"UnsqueezeBackward0
+0x7f33d8f8bd10" -> "SumBackward1
+0x7f33d8f8bbd0"
+	"SumBackward1
+0x7f33d8f8bbd0" -> "MulBackward0
+0x7f33d8f8b7d0"
+	"MulBackward0
+0x7f33d8f8b7d0" -> "ViewBackward
+0x7f33d8f9f090"
+	"ViewBackward
+0x7f33d8f9f090" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b7d0" -> "ViewBackward
+0x7f33d8f9f350"
+	"ViewBackward
+0x7f33d8f9f350" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b090" -> "ViewBackward
+0x7f33d8f8bf90"
+	"ViewBackward
+0x7f33d8f8bf90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f8b550" -> "SigmoidBackward
+0x7f33d8f8b990"
+	"SigmoidBackward
+0x7f33d8f8b990" -> "AddBackward0
+0x7f33d8f8bd50"
+	"AddBackward0
+0x7f33d8f8bd50" -> "AddBackward0
+0x7f33d8f8ba90"
+	"AddBackward0
+0x7f33d8f8ba90" -> "MmBackward
+0x7f33d8f8b910"
+	"MmBackward
+0x7f33d8f8b910" -> "FusedDropoutBackward
+0x7f33d8f8bed0"
+	"FusedDropoutBackward
+0x7f33d8f8bed0" -> "ViewBackward
+0x7f33d8f8bd90"
+	"ViewBackward
+0x7f33d8f8bd90" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b910" -> "ViewBackward
+0x7f33d8f8b450"
+	"ViewBackward
+0x7f33d8f8b450" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8ba90" -> "MmBackward
+0x7f33d8f8b090"
+	"MmBackward
+0x7f33d8f8b090" -> "FusedDropoutBackward
+0x7f33d8f8bd10"
+	"FusedDropoutBackward
+0x7f33d8f8bd10" -> "ViewBackward
+0x7f33d8f8b950"
+	"ViewBackward
+0x7f33d8f8b950" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b090" -> "ViewBackward
+0x7f33d8f8bc10"
+	"ViewBackward
+0x7f33d8f8bc10" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8bd50" -> "MmBackward
+0x7f33d8f8bfd0"
+	"MmBackward
+0x7f33d8f8bfd0" -> "FusedDropoutBackward
+0x7f33d8f8bf10"
+	"FusedDropoutBackward
+0x7f33d8f8bf10" -> "ViewBackward
+0x7f33d8f8bbd0"
+	"ViewBackward
+0x7f33d8f8bbd0" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8bfd0" -> "UnsqueezeBackward0
+0x7f33d8f8be90"
+	"UnsqueezeBackward0
+0x7f33d8f8be90" -> "SumBackward1
+0x7f33d8f8bed0"
+	"SumBackward1
+0x7f33d8f8bed0" -> "MulBackward0
+0x7f33d8f8bc50"
+	"MulBackward0
+0x7f33d8f8bc50" -> "ViewBackward
+0x7f33d8f8bd10"
+	"ViewBackward
+0x7f33d8f8bd10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bc50" -> "ViewBackward
+0x7f33d8f8b950"
+	"ViewBackward
+0x7f33d8f8b950" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290690" -> "None
+None"
+	"AddBackward0
+0x7f33e2290b50" -> "MmBackward
+0x7f33e2290e10"
+	"MmBackward
+0x7f33e2290e10" -> "FusedDropoutBackward
+0x7f33d8f8b650"
+	"FusedDropoutBackward
+0x7f33d8f8b650" -> "ViewBackward
+0x7f33d8f8ba50"
+	"ViewBackward
+0x7f33d8f8ba50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e2290e10" -> "ViewBackward
+0x7f33d8f8bb50"
+	"ViewBackward
+0x7f33d8f8bb50" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290f50" -> "MmBackward
+0x7f33e22907d0"
+	"MmBackward
+0x7f33e22907d0" -> "FusedDropoutBackward
+0x7f33e2290e10"
+	"FusedDropoutBackward
+0x7f33e2290e10" -> "ViewBackward
+0x7f33d8f8b610"
+	"ViewBackward
+0x7f33d8f8b610" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e22907d0" -> "UnsqueezeBackward0
+0x7f33e2290fd0"
+	"UnsqueezeBackward0
+0x7f33e2290fd0" -> "SumBackward1
+0x7f33d8f8bb50"
+	"SumBackward1
+0x7f33d8f8bb50" -> "MulBackward0
+0x7f33d8f8b750"
+	"MulBackward0
+0x7f33d8f8b750" -> "ViewBackward
+0x7f33d8f8ba50"
+	"ViewBackward
+0x7f33d8f8ba50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b750" -> "ViewBackward
+0x7f33d8f8b550"
+	"ViewBackward
+0x7f33d8f8b550" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2286f50" -> "None
+None"
+	"AddBackward0
+0x7f33e2290210" -> "MmBackward
+0x7f33e2290910"
+	"MmBackward
+0x7f33e2290910" -> "TBackward
+0x7f33e2290ad0"
+	"TBackward
+0x7f33e2290ad0" -> "UnsqueezeBackward0
+0x7f33e2290e90"
+	"UnsqueezeBackward0
+0x7f33e2290e90" -> "SumBackward1
+0x7f33e2290b90"
+	"SumBackward1
+0x7f33e2290b90" -> "MulBackward0
+0x7f33e2290750"
+	"MulBackward0
+0x7f33e2290750" -> "ViewBackward
+0x7f33e2290290"
+	"ViewBackward
+0x7f33e2290290" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290750" -> "ViewBackward
+0x7f33e2290690"
+	"ViewBackward
+0x7f33e2290690" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290910" -> "ViewBackward
+0x7f33e22906d0"
+	"ViewBackward
+0x7f33e22906d0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2286d10" -> "SigmoidBackward
+0x7f33e2286d90"
+	"SigmoidBackward
+0x7f33e2286d90" -> "AddBackward0
+0x7f33e2290650"
+	"AddBackward0
+0x7f33e2290650" -> "AddBackward0
+0x7f33e2290450"
+	"AddBackward0
+0x7f33e2290450" -> "MmBackward
+0x7f33e2290350"
+	"MmBackward
+0x7f33e2290350" -> "FusedDropoutBackward
+0x7f33e2290d50"
+	"FusedDropoutBackward
+0x7f33e2290d50" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33e2290350" -> "DivBackward0
+0x7f33e2286f50"
+	"DivBackward0
+0x7f33e2286f50" -> "AddBackward0
+0x7f33e2290bd0"
+	"AddBackward0
+0x7f33e2290bd0" -> "DivBackward0
+0x7f33e2290710"
+	"DivBackward0
+0x7f33e2290710" -> "AddBackward0
+0x7f33e2290890"
+	"AddBackward0
+0x7f33e2290890" -> "ViewBackward
+0x7f33e2290690"
+	"ViewBackward
+0x7f33e2290690" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33e2290890" -> "MulBackward0
+0x7f33e2290c90"
+	"MulBackward0
+0x7f33e2290c90" -> "SoftmaxBackward
+0x7f33e2290d10"
+	"SoftmaxBackward
+0x7f33e2290d10" -> "AddBackward0
+0x7f33d8f8b510"
+	"AddBackward0
+0x7f33d8f8b510" -> "MmBackward
+0x7f33d8f8b2d0"
+	"MmBackward
+0x7f33d8f8b2d0" -> "TBackward
+0x7f33d8f8b690"
+	"TBackward
+0x7f33d8f8b690" -> "UnsqueezeBackward0
+0x7f33d8f8b6d0"
+	"UnsqueezeBackward0
+0x7f33d8f8b6d0" -> "SumBackward1
+0x7f33d8f8b190"
+	"SumBackward1
+0x7f33d8f8b190" -> "MulBackward0
+0x7f33d8f8b210"
+	"MulBackward0
+0x7f33d8f8b210" -> "ViewBackward
+0x7f33d8f8bc90"
+	"ViewBackward
+0x7f33d8f8bc90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b210" -> "ViewBackward
+0x7f33d8f8b3d0"
+	"ViewBackward
+0x7f33d8f8b3d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b2d0" -> "ViewBackward
+0x7f33e2290690"
+	"ViewBackward
+0x7f33e2290690" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b510" -> "MmBackward
+0x7f33d8f8b410"
+	"MmBackward
+0x7f33d8f8b410" -> "TBackward
+0x7f33d8f8bb10"
+	"TBackward
+0x7f33d8f8bb10" -> "UnsqueezeBackward0
+0x7f33d8f8b7d0"
+	"UnsqueezeBackward0
+0x7f33d8f8b7d0" -> "SumBackward1
+0x7f33d8f8bcd0"
+	"SumBackward1
+0x7f33d8f8bcd0" -> "MulBackward0
+0x7f33d8f8b490"
+	"MulBackward0
+0x7f33d8f8b490" -> "ViewBackward
+0x7f33d8f8ba90"
+	"ViewBackward
+0x7f33d8f8ba90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b490" -> "ViewBackward
+0x7f33d8f8b210"
+	"ViewBackward
+0x7f33d8f8b210" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8ba50"
+	"ViewBackward
+0x7f33d8f8ba50" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290c90" -> "SigmoidBackward
+0x7f33e2290e10"
+	"SigmoidBackward
+0x7f33e2290e10" -> "AddBackward0
+0x7f33d8f8bb50"
+	"AddBackward0
+0x7f33d8f8bb50" -> "AddBackward0
+0x7f33d8f8b110"
+	"AddBackward0
+0x7f33d8f8b110" -> "MmBackward
+0x7f33d8f8b690"
+	"MmBackward
+0x7f33d8f8b690" -> "FusedDropoutBackward
+0x7f33d8f8b710"
+	"FusedDropoutBackward
+0x7f33d8f8b710" -> "ViewBackward
+0x7f33d8f8b810"
+	"ViewBackward
+0x7f33d8f8b810" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b690" -> "ViewBackward
+0x7f33e2290690"
+	"ViewBackward
+0x7f33e2290690" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b110" -> "MmBackward
+0x7f33d8f8b410"
+	"MmBackward
+0x7f33d8f8b410" -> "FusedDropoutBackward
+0x7f33d8f8bad0"
+	"FusedDropoutBackward
+0x7f33d8f8bad0" -> "ViewBackward
+0x7f33d8f8bc90"
+	"ViewBackward
+0x7f33d8f8bc90" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8b390"
+	"ViewBackward
+0x7f33d8f8b390" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8bb50" -> "MmBackward
+0x7f33d8f8b610"
+	"MmBackward
+0x7f33d8f8b610" -> "FusedDropoutBackward
+0x7f33d8f8b050"
+	"FusedDropoutBackward
+0x7f33d8f8b050" -> "ViewBackward
+0x7f33d8f8b710"
+	"ViewBackward
+0x7f33d8f8b710" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b610" -> "UnsqueezeBackward0
+0x7f33d8f8b990"
+	"UnsqueezeBackward0
+0x7f33d8f8b990" -> "SumBackward1
+0x7f33d8f8b390"
+	"SumBackward1
+0x7f33d8f8b390" -> "MulBackward0
+0x7f33d8f8b850"
+	"MulBackward0
+0x7f33d8f8b850" -> "ViewBackward
+0x7f33d8f8bc90"
+	"ViewBackward
+0x7f33d8f8bc90" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b850" -> "ViewBackward
+0x7f33d8f8bcd0"
+	"ViewBackward
+0x7f33d8f8bcd0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290710" -> "None
+None"
+	"AddBackward0
+0x7f33e2290bd0" -> "MulBackward0
+0x7f33e2290f50"
+	"MulBackward0
+0x7f33e2290f50" -> "SoftmaxBackward
+0x7f33e22907d0"
+	"SoftmaxBackward
+0x7f33e22907d0" -> "AddBackward0
+0x7f33e2290b50"
+	"AddBackward0
+0x7f33e2290b50" -> "MmBackward
+0x7f33e2290690"
+	"MmBackward
+0x7f33e2290690" -> "TBackward
+0x7f33d8f8be50"
+	"TBackward
+0x7f33d8f8be50" -> "UnsqueezeBackward0
+0x7f33d8f8b650"
+	"UnsqueezeBackward0
+0x7f33d8f8b650" -> "SumBackward1
+0x7f33d8f8bb50"
+	"SumBackward1
+0x7f33d8f8bb50" -> "MulBackward0
+0x7f33d8f8b610"
+	"MulBackward0
+0x7f33d8f8b610" -> "ViewBackward
+0x7f33d8f8bb10"
+	"ViewBackward
+0x7f33d8f8bb10" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b610" -> "ViewBackward
+0x7f33d8f8bd50"
+	"ViewBackward
+0x7f33d8f8bd50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290690" -> "DivBackward0
+0x7f33e2290710"
+	"DivBackward0
+0x7f33e2290710" -> "AddBackward0
+0x7f33d8f8b750"
+	"AddBackward0
+0x7f33d8f8b750" -> "ViewBackward
+0x7f33d8f8b990"
+	"ViewBackward
+0x7f33d8f8b990" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b750" -> "MulBackward0
+0x7f33d8f8b650"
+	"MulBackward0
+0x7f33d8f8b650" -> "SoftmaxBackward
+0x7f33d8f8bc10"
+	"SoftmaxBackward
+0x7f33d8f8bc10" -> "AddBackward0
+0x7f33d8f8bb10"
+	"AddBackward0
+0x7f33d8f8bb10" -> "MmBackward
+0x7f33d8f8b390"
+	"MmBackward
+0x7f33d8f8b390" -> "TBackward
+0x7f33d8f8b210"
+	"TBackward
+0x7f33d8f8b210" -> "UnsqueezeBackward0
+0x7f33d8f8bad0"
+	"UnsqueezeBackward0
+0x7f33d8f8bad0" -> "SumBackward1
+0x7f33d8f8be10"
+	"SumBackward1
+0x7f33d8f8be10" -> "MulBackward0
+0x7f33d8f8b810"
+	"MulBackward0
+0x7f33d8f8b810" -> "ViewBackward
+0x7f33d8f290d0"
+	"ViewBackward
+0x7f33d8f290d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b810" -> "ViewBackward
+0x7f33d8f29110"
+	"ViewBackward
+0x7f33d8f29110" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b390" -> "ViewBackward
+0x7f33d8f8b990"
+	"ViewBackward
+0x7f33d8f8b990" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8bb10" -> "MmBackward
+0x7f33d8f8b410"
+	"MmBackward
+0x7f33d8f8b410" -> "TBackward
+0x7f33d8f8bc50"
+	"TBackward
+0x7f33d8f8bc50" -> "UnsqueezeBackward0
+0x7f33d8f8bdd0"
+	"UnsqueezeBackward0
+0x7f33d8f8bdd0" -> "SumBackward1
+0x7f33d8f8be10"
+	"SumBackward1
+0x7f33d8f8be10" -> "MulBackward0
+0x7f33d8f8bf10"
+	"MulBackward0
+0x7f33d8f8bf10" -> "ViewBackward
+0x7f33d8f29090"
+	"ViewBackward
+0x7f33d8f29090" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bf10" -> "ViewBackward
+0x7f33d8f29350"
+	"ViewBackward
+0x7f33d8f29350" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8b490"
+	"ViewBackward
+0x7f33d8f8b490" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f8b650" -> "SigmoidBackward
+0x7f33d8f8b710"
+	"SigmoidBackward
+0x7f33d8f8b710" -> "AddBackward0
+0x7f33d8f8b050"
+	"AddBackward0
+0x7f33d8f8b050" -> "AddBackward0
+0x7f33d8f8bed0"
+	"AddBackward0
+0x7f33d8f8bed0" -> "MmBackward
+0x7f33d8f8b210"
+	"MmBackward
+0x7f33d8f8b210" -> "FusedDropoutBackward
+0x7f33d8f8ba90"
+	"FusedDropoutBackward
+0x7f33d8f8ba90" -> "ViewBackward
+0x7f33d8f8bbd0"
+	"ViewBackward
+0x7f33d8f8bbd0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b210" -> "ViewBackward
+0x7f33d8f8b990"
+	"ViewBackward
+0x7f33d8f8b990" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8bed0" -> "MmBackward
+0x7f33d8f8b410"
+	"MmBackward
+0x7f33d8f8b410" -> "FusedDropoutBackward
+0x7f33d8f8bdd0"
+	"FusedDropoutBackward
+0x7f33d8f8bdd0" -> "ViewBackward
+0x7f33d8f8b150"
+	"ViewBackward
+0x7f33d8f8b150" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8b410" -> "ViewBackward
+0x7f33d8f8bad0"
+	"ViewBackward
+0x7f33d8f8bad0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8b050" -> "MmBackward
+0x7f33d8f8b090"
+	"MmBackward
+0x7f33d8f8b090" -> "FusedDropoutBackward
+0x7f33d8f8bd10"
+	"FusedDropoutBackward
+0x7f33d8f8bd10" -> "ViewBackward
+0x7f33d8f8be10"
+	"ViewBackward
+0x7f33d8f8be10" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8b090" -> "UnsqueezeBackward0
+0x7f33d8f8bcd0"
+	"UnsqueezeBackward0
+0x7f33d8f8bcd0" -> "SumBackward1
+0x7f33d8f8ba90"
+	"SumBackward1
+0x7f33d8f8ba90" -> "MulBackward0
+0x7f33d8f8bf90"
+	"MulBackward0
+0x7f33d8f8bf90" -> "ViewBackward
+0x7f33d8f8bdd0"
+	"ViewBackward
+0x7f33d8f8bdd0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8bf90" -> "ViewBackward
+0x7f33d8f8b150"
+	"ViewBackward
+0x7f33d8f8b150" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290710" -> "None
+None"
+	"AddBackward0
+0x7f33e2290b50" -> "MmBackward
+0x7f33e2290e10"
+	"MmBackward
+0x7f33e2290e10" -> "TBackward
+0x7f33d8f8b510"
+	"TBackward
+0x7f33d8f8b510" -> "UnsqueezeBackward0
+0x7f33d8f8b7d0"
+	"UnsqueezeBackward0
+0x7f33d8f8b7d0" -> "SumBackward1
+0x7f33d8f8b550"
+	"SumBackward1
+0x7f33d8f8b550" -> "MulBackward0
+0x7f33d8f8b2d0"
+	"MulBackward0
+0x7f33d8f8b2d0" -> "ViewBackward
+0x7f33d8f8b110"
+	"ViewBackward
+0x7f33d8f8b110" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b2d0" -> "ViewBackward
+0x7f33d8f8b990"
+	"ViewBackward
+0x7f33d8f8b990" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33e2290e10" -> "ViewBackward
+0x7f33d8f8b4d0"
+	"ViewBackward
+0x7f33d8f8b4d0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33e2290f50" -> "SigmoidBackward
+0x7f33e2290fd0"
+	"SigmoidBackward
+0x7f33e2290fd0" -> "AddBackward0
+0x7f33e2290d10"
+	"AddBackward0
+0x7f33e2290d10" -> "AddBackward0
+0x7f33e2290590"
+	"AddBackward0
+0x7f33e2290590" -> "MmBackward
+0x7f33d8f8b5d0"
+	"MmBackward
+0x7f33d8f8b5d0" -> "FusedDropoutBackward
+0x7f33d8f8b710"
+	"FusedDropoutBackward
+0x7f33d8f8b710" -> "ViewBackward
+0x7f33d8f8b8d0"
+	"ViewBackward
+0x7f33d8f8b8d0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8b5d0" -> "DivBackward0
+0x7f33e2290710"
+	"DivBackward0
+0x7f33e2290710" -> "AddBackward0
+0x7f33d8f8b910"
+	"AddBackward0
+0x7f33d8f8b910" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b910" -> "MulBackward0
+0x7f33d8f8b8d0"
+	"MulBackward0
+0x7f33d8f8b8d0" -> "SoftmaxBackward
+0x7f33d8f8bed0"
+	"SoftmaxBackward
+0x7f33d8f8bed0" -> "AddBackward0
+0x7f33d8f8bf10"
+	"AddBackward0
+0x7f33d8f8bf10" -> "MmBackward
+0x7f33d8f8b990"
+	"MmBackward
+0x7f33d8f8b990" -> "TBackward
+0x7f33d8f8b210"
+	"TBackward
+0x7f33d8f8b210" -> "UnsqueezeBackward0
+0x7f33d8f8bad0"
+	"UnsqueezeBackward0
+0x7f33d8f8bad0" -> "SumBackward1
+0x7f33d8f8bf90"
+	"SumBackward1
+0x7f33d8f8bf90" -> "MulBackward0
+0x7f33d8f2e090"
+	"MulBackward0
+0x7f33d8f2e090" -> "ViewBackward
+0x7f33d8f2e290"
+	"ViewBackward
+0x7f33d8f2e290" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f2e090" -> "ViewBackward
+0x7f33d8f2e2d0"
+	"ViewBackward
+0x7f33d8f2e2d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8b990" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8bf10" -> "MmBackward
+0x7f33d8f8bb50"
+	"MmBackward
+0x7f33d8f8bb50" -> "TBackward
+0x7f33d8f8b150"
+	"TBackward
+0x7f33d8f8b150" -> "UnsqueezeBackward0
+0x7f33d8f8b490"
+	"UnsqueezeBackward0
+0x7f33d8f8b490" -> "SumBackward1
+0x7f33d8f2e390"
+	"SumBackward1
+0x7f33d8f2e390" -> "MulBackward0
+0x7f33d8f2e510"
+	"MulBackward0
+0x7f33d8f2e510" -> "ViewBackward
+0x7f33d8f2e4d0"
+	"ViewBackward
+0x7f33d8f2e4d0" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f2e510" -> "ViewBackward
+0x7f33d8f2e090"
+	"ViewBackward
+0x7f33d8f2e090" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"MmBackward
+0x7f33d8f8bb50" -> "ViewBackward
+0x7f33d8f8b410"
+	"ViewBackward
+0x7f33d8f8b410" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"MulBackward0
+0x7f33d8f8b8d0" -> "SigmoidBackward
+0x7f33d8f8b110"
+	"SigmoidBackward
+0x7f33d8f8b110" -> "AddBackward0
+0x7f33d8f8ba10"
+	"AddBackward0
+0x7f33d8f8ba10" -> "AddBackward0
+0x7f33d8f8b950"
+	"AddBackward0
+0x7f33d8f8b950" -> "MmBackward
+0x7f33d8f8be10"
+	"MmBackward
+0x7f33d8f8be10" -> "FusedDropoutBackward
+0x7f33d8f8bad0"
+	"FusedDropoutBackward
+0x7f33d8f8bad0" -> "ViewBackward
+0x7f33d8f2e3d0"
+	"ViewBackward
+0x7f33d8f2e3d0" -> "AccumulateGrad
+(8, 8, 64)" [label=X]
+	"MmBackward
+0x7f33d8f8be10" -> "ViewBackward
+0x7f33d8f8b290"
+	"ViewBackward
+0x7f33d8f8b290" -> "AccumulateGrad
+(2, 32, 20)" [label=H]
+	"AddBackward0
+0x7f33d8f8b950" -> "MmBackward
+0x7f33d8f8bb50"
+	"MmBackward
+0x7f33d8f8bb50" -> "FusedDropoutBackward
+0x7f33d8f8b210"
+	"FusedDropoutBackward
+0x7f33d8f8b210" -> "ViewBackward
+0x7f33d8f2e150"
+	"ViewBackward
+0x7f33d8f2e150" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8bb50" -> "ViewBackward
+0x7f33d8f8bad0"
+	"ViewBackward
+0x7f33d8f8bad0" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33d8f8ba10" -> "MmBackward
+0x7f33d8f8bc50"
+	"MmBackward
+0x7f33d8f8bc50" -> "FusedDropoutBackward
+0x7f33d8f8b150"
+	"FusedDropoutBackward
+0x7f33d8f8b150" -> "ViewBackward
+0x7f33d8f8b810"
+	"ViewBackward
+0x7f33d8f8b810" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33d8f8bc50" -> "UnsqueezeBackward0
+0x7f33d8f8bdd0"
+	"UnsqueezeBackward0
+0x7f33d8f8bdd0" -> "SumBackward1
+0x7f33d8f8b810"
+	"SumBackward1
+0x7f33d8f8b810" -> "MulBackward0
+0x7f33d8f2e090"
+	"MulBackward0
+0x7f33d8f2e090" -> "ViewBackward
+0x7f33d8f2e150"
+	"ViewBackward
+0x7f33d8f2e150" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f2e090" -> "ViewBackward
+0x7f33d8f2e390"
+	"ViewBackward
+0x7f33d8f2e390" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2290710" -> "None
+None"
+	"AddBackward0
+0x7f33e2290590" -> "MmBackward
+0x7f33d8f8ba50"
+	"MmBackward
+0x7f33d8f8ba50" -> "FusedDropoutBackward
+0x7f33d8f8bfd0"
+	"FusedDropoutBackward
+0x7f33d8f8bfd0" -> "ViewBackward
+0x7f33d8f8b050"
+	"ViewBackward
+0x7f33d8f8b050" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33d8f8ba50" -> "ViewBackward
+0x7f33d8f8b690"
+	"ViewBackward
+0x7f33d8f8b690" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290d10" -> "MmBackward
+0x7f33e2290e10"
+	"MmBackward
+0x7f33e2290e10" -> "FusedDropoutBackward
+0x7f33d8f8b9d0"
+	"FusedDropoutBackward
+0x7f33d8f8b9d0" -> "ViewBackward
+0x7f33d8f8b710"
+	"ViewBackward
+0x7f33d8f8b710" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e2290e10" -> "UnsqueezeBackward0
+0x7f33d8f8b590"
+	"UnsqueezeBackward0
+0x7f33d8f8b590" -> "SumBackward1
+0x7f33d8f8b690"
+	"SumBackward1
+0x7f33d8f8b690" -> "MulBackward0
+0x7f33d8f8b190"
+	"MulBackward0
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8b050"
+	"ViewBackward
+0x7f33d8f8b050" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33d8f8b190" -> "ViewBackward
+0x7f33d8f8b8d0"
+	"ViewBackward
+0x7f33d8f8b8d0" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2286f50" -> "None
+None"
+	"AddBackward0
+0x7f33e2290450" -> "MmBackward
+0x7f33e2290910"
+	"MmBackward
+0x7f33e2290910" -> "FusedDropoutBackward
+0x7f33e2290a10"
+	"FusedDropoutBackward
+0x7f33e2290a10" -> "ViewBackward
+0x7f33e2290c50"
+	"ViewBackward
+0x7f33e2290c50" -> "AccumulateGrad
+(16, 4, 64)" [label=Y]
+	"MmBackward
+0x7f33e2290910" -> "ViewBackward
+0x7f33e2290a90"
+	"ViewBackward
+0x7f33e2290a90" -> "AccumulateGrad
+(4, 16, 20)" [label=W]
+	"AddBackward0
+0x7f33e2290650" -> "MmBackward
+0x7f33e2290150"
+	"MmBackward
+0x7f33e2290150" -> "FusedDropoutBackward
+0x7f33e22908d0"
+	"FusedDropoutBackward
+0x7f33e22908d0" -> "ViewBackward
+0x7f33e2290d50"
+	"ViewBackward
+0x7f33e2290d50" -> "AccumulateGrad
+(32, 2, 64)" [label=Z]
+	"MmBackward
+0x7f33e2290150" -> "UnsqueezeBackward0
+0x7f33e2290250"
+	"UnsqueezeBackward0
+0x7f33e2290250" -> "SumBackward1
+0x7f33e2290a90"
+	"SumBackward1
+0x7f33e2290a90" -> "MulBackward0
+0x7f33e2290ed0"
+	"MulBackward0
+0x7f33e2290ed0" -> "ViewBackward
+0x7f33e2290c50"
+	"ViewBackward
+0x7f33e2290c50" -> "AccumulateGrad
+(2, 64, 5)" [label=F]
+	"MulBackward0
+0x7f33e2290ed0" -> "ViewBackward
+0x7f33e2290f50"
+	"ViewBackward
+0x7f33e2290f50" -> "AccumulateGrad
+(1, 64, 10)" [label=E]
+	"DivBackward0
+0x7f33e2286810" -> "None
 None"
 }
