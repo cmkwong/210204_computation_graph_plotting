@@ -73,9 +73,9 @@ class Test_entNet_Model(nn.Module):
 #--------------------------------------------------------------------------------------------------#
 
 model = Test_entNet_Model()
-CG = graph.Computation_Graph(identity_size)
+CG = graph.Computation_Graph(identity_size, plot_graph=True)
 
-fake_sentences = [nn.init.normal_(torch.empty(identity_size['E'], dtype=torch.float, requires_grad=True, device='cuda'), mean=0.0, std=0.1).view(input_size) for _ in range(3)]
+fake_sentences = [nn.init.normal_(torch.empty(identity_size['E'], dtype=torch.float, requires_grad=True, device='cuda'), mean=0.0, std=0.1).view(input_size) for _ in range(6)]
 fake_question = nn.init.normal_(torch.empty(identity_size['Q'], dtype=torch.float, requires_grad=True, device='cuda'), mean=0.0, std=0.1).view(input_size)
 
 H = model(fake_sentences)
